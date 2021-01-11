@@ -1,0 +1,13 @@
+.main {
+    border: 2px solid blue;
+    margin: 5px;
+    background-color: yellow;
+}
+
+.para {
+    background-color: pink;
+}
+
+.para1 {
+    color: pink;
+}
