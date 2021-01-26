@@ -40,6 +40,7 @@ class SignIn extends Component {
         console.log("Error: " + err);
       }); */
   };
+  
   render() {
     return (
       <Container className={classes.container} /* style={{ width: "50%" }} */>
