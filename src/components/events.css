@@ -1,0 +1,11 @@
+ul.no-bullets {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.center {
+  text-align: left;
+  margin: auto;
+  width: 65%;
+  padding: 10px;
+}

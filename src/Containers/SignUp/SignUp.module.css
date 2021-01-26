@@ -1,0 +1,22 @@
+.container {
+  padding: 50px;
+  background-color: #eaedef;
+  margin: 57px;
+  top: 20px;
+  position: relative;
+  border-radius: 9px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  justify-content: center;
+}
+.label {
+  width: 620px;
+  text-align: justify;
+  display: inline-block;
+  margin-bottom: 50px;
+}
+
+.text {
+  background-color: #fcc614;
+  display: flex;
+}

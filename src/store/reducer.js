@@ -15,6 +15,7 @@ const reducer = (state = initialState, action) => {
           isLoggedIn: false
       }
   }
+  
   return state;
 };
 

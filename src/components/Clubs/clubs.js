@@ -1,31 +1,32 @@
 import { Container, Card, CardDeck, Button, Jumbotron } from "react-bootstrap";
 import Parikalan from "../../parikalan.png";
 import { Link } from "react-router-dom";
+import CodeBotsLogo from '../../codebots.jpeg';
 
 const clubs = (props) => {
   const clubsInfo = [
     {
       imageSrc: Parikalan,
       title: "Netweavers",
-      content: "Content about the club",
+      content: "Club for Web Development",
+      path: "/clubs/netweavers",
+    },
+    {
+      imageSrc: CodeBotsLogo,
+      title: "Codebots",
+      content: "Club for Coding",
       path: "/clubs/netweavers",
     },
     {
       imageSrc: Parikalan,
-      title: "Netweavers",
-      content: "Content about the club",
+      title: "Quizbots",
+      content: "Club for Technical Quizes",
       path: "/clubs/netweavers",
     },
     {
       imageSrc: Parikalan,
-      title: "Netweavers",
-      content: "Content about the club",
-      path: "/clubs/netweavers",
-    },
-    {
-      imageSrc: Parikalan,
-      title: "Netweavers",
-      content: "Content about the club",
+      title: "EWS",
+      content: "Club for Workshops and Seminars ",
       path: "/clubs/netweavers",
     },
   ];

@@ -1,9 +1,32 @@
 import { Component } from "react";
-import { Nav, Navbar } from "react-bootstrap";
+import { Nav, Navbar, Image } from "react-bootstrap";
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
+import parikalan from "../../parikalan.png";
 
 class Navigation extends Component {
+  logoutClicked = () => {
+    fetch("http://localhost:8000/auth/logout", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify({ name: "Ankit" }),
+    })
+      .then((result) => {
+        return result.json();
+      })
+      .then((response) => {
+        this.props.isLoggedOut();
+        localStorage.removeItem("token");
+        localStorage.removeItem("expiryDate");
+        localStorage.removeItem("userId");
+      })
+      .catch((err) => {
+        console.log("Error fetching the logout.");
+        console.log("Error: " + err);
+      });
+  };
   render() {
     if (this.props.isLoggedIn) {
       return (
@@ -11,7 +34,7 @@ class Navigation extends Component {
           <Navbar expand="lg" style={{ backgroundColor: "#9bc9c8" }}>
             <Navbar.Brand>
               <NavLink to="/" exact activeStyle={{ color: "white" }}>
-                Parikalan
+                Pariklan Image
               </NavLink>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -28,21 +51,27 @@ class Navigation extends Component {
                   </NavLink>
                 </Nav.Link>
                 <Nav.Link>
-                  <NavLink to="/quiz" activeStyle={{ color: "white" }}>
-                    Quiz
+                  <NavLink to="/events" activeStyle={{ color: "white" }}>
+                    Events
+                  </NavLink>
+                </Nav.Link>
+                <Nav.Link>
+                  <NavLink to="/xenium" activeStyle={{ color: "white" }}>
+                    Xenium
                   </NavLink>
                 </Nav.Link>
               </Nav>
 
               <Nav>
-                <Nav.Link className="mr-sm-2">
-                  <NavLink
-                    to="/"
+                <Nav.Link className="mr-sm-2" onClick={this.logoutClicked}>
+                  {/* <NavLink
+                    to="/auth/logout"
                     activeStyle={{ color: "white" }}
-                    onClick={this.props.isLoggedOut}
+                    onClick={this.logoutClicked}
                   >
                     Logout
-                  </NavLink>
+                  </NavLink> */}
+                  Logout
                 </Nav.Link>
               </Nav>
             </Navbar.Collapse>
@@ -55,7 +84,7 @@ class Navigation extends Component {
           <Navbar expand="lg" style={{ backgroundColor: "#9bc9c8" }}>
             <Navbar.Brand>
               <NavLink to="/" exact activeStyle={{ color: "white" }}>
-                Parikalan
+                <Image src={parikalan} rounded height="50px" width="70px" />
               </NavLink>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -72,8 +101,13 @@ class Navigation extends Component {
                   </NavLink>
                 </Nav.Link>
                 <Nav.Link>
-                  <NavLink to="/quiz" activeStyle={{ color: "white" }}>
-                    Quiz
+                  <NavLink to="/events" activeStyle={{ color: "white" }}>
+                    Events
+                  </NavLink>
+                </Nav.Link>
+                <Nav.Link>
+                  <NavLink to="/xenium" activeStyle={{ color: "white" }}>
+                    Xenium
                   </NavLink>
                 </Nav.Link>
               </Nav>

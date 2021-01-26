@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { Container, Form, Row, Col, Button } from "react-bootstrap";
 import { connect } from "react-redux";
+import classes from "./SignIn.module.css";
 
 class SignIn extends Component {
   state = {
@@ -13,8 +14,11 @@ class SignIn extends Component {
   };
 
   onSubmit = (event) => {
-    event.preventDefault();
-    fetch("http://localhost:8000/auth/signin", {
+    this.props.onSignIn(event, {
+      email: this.state.email,
+      password: this.state.password
+    })
+   /*  fetch("http://localhost:8000/auth/signin", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -34,12 +38,12 @@ class SignIn extends Component {
       .catch((err) => {
         console.log("[SignIn]: Fetching from backend failed.");
         console.log("Error: " + err);
-      });
+      }); */
   };
   render() {
     return (
-      <Container>
-        <Form style={{ margin: "10px", width: "80%" }}>
+      <Container className={classes.container} /* style={{ width: "50%" }} */>
+        <Form className={classes.label}>
           <Form.Group as={Row}>
             <Form.Label column sm={2}>
               Email
@@ -70,7 +74,11 @@ class SignIn extends Component {
 
           <Form.Group as={Row}>
             <Col sm={{ span: 10, offset: 2 }}>
-              <Button type="submit" onClick={this.onSubmit}>
+              <Button
+                type="submit"
+                onClick={this.onSubmit}
+                style={{ align: "center" }}
+              >
                 Sign In
               </Button>
             </Col>
@@ -81,16 +89,16 @@ class SignIn extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
+/* const mapStateToProps = (state) => {
   return {
     isLoggedIn: state.isLoggedIn,
   };
-};
+}; */
 
-const mapDispatchToProps = (dispatch) => {
+/* const mapDispatchToProps = (dispatch) => {
   return {
     onSuccess: () => dispatch({ type: "SUCCESS" }),
   };
-};
+}; */
 
-export default connect(mapStateToProps, mapDispatchToProps)(SignIn);
+export default connect()(SignIn);

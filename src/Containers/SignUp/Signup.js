@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import { Container, Form, Col, Button, Row } from "react-bootstrap";
-import image from "../../blue.jpg";
-
-/* import Input from "../../components/UI/Input/input"; */
-
+import clas from "./SignUp.module.css";
 class Signup extends Component {
   state = {
     name: "",
@@ -33,7 +30,7 @@ class Signup extends Component {
         return result.json();
       })
       .then((response) => {
-        if(response.message === "created") {
+        if (response.message === "created") {
           console.log(response);
           this.props.history.push("/auth/signin");
         }
@@ -46,8 +43,8 @@ class Signup extends Component {
   render() {
     document.title = "Paikalan-Signup";
     return (
-      <Container style={{ backgroundImage: `url(${image})`, width: "80%" }}>
-        <Form style={{ padding: "20px", width: "70%", margin: "10px" }}>
+      <Container className={clas.container} style={{ width: "80%" }}>
+        <Form className={clas.label}>
           <Form.Group as={Row}>
             <Form.Label column sm={2}>
               Name
@@ -89,12 +86,12 @@ class Signup extends Component {
               />
             </Col>
           </Form.Group>
-          <Form.Text id="passwordHelpBlock" muted>
+          <Form.Text className={clas.text} id="passwordHelpBlock" muted>
             Your password must be 8-20 characters long, contain letters and
             numbers, and must not contain spaces, special characters, or emoji.
           </Form.Text>
-
-          <Form.Group as={Row} style={{ margin: "10px" }}>
+          <p></p>
+          <Form.Group as={Row}>
             <Form.Label column sm={2}>
               College
             </Form.Label>
