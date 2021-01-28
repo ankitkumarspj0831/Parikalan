@@ -48,7 +48,6 @@ const home = (props) => {
       <Image
         src={xenium2021}
         fluid
-        style={{ height: "250px", width: "600px" }}
       />
       <p></p>
       <Carousel>

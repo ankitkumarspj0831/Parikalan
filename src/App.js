@@ -9,10 +9,11 @@ import Signup from "./Containers/SignUp/Signup";
 import SignIn from "./Containers/SignIn/SignIn";
 import Clubs from "./components/Clubs/clubs";
 import Netweavers from "./components/Clubs/netweavers";
+import EWS from "./components/Clubs/ews";
 import PageNotFound from "./components/pageNotFound";
 import BottomNavigation from "./components/Navigation/bottom-navigation";
-import Events from './components/events';
-import Xenium from './components/xenium';
+import Events from "./components/events";
+import Xenium from "./components/xenium";
 
 class App extends Component {
   state = {
@@ -59,7 +60,7 @@ class App extends Component {
       })
       .then((resData) => {
         console.log(resData);
-        this.props.onSuccess();     // redux to set is logged in to true
+        this.props.onSuccess(); // redux to set is logged in to true
         this.setState({
           isAuth: true,
           token: resData.token,
@@ -100,8 +101,9 @@ class App extends Component {
     <Switch>
       <Route path="/" exact component={Home} />
       <Route path="/clubs" exact component={Clubs} />
-      <Route path="/xenium" exact component={Xenium}/>
+      <Route path="/xenium" exact component={Xenium} />
       <Route path="/clubs/netweavers" component={Netweavers} />
+      <Route path="/clubs/ews" component={EWS} />
       <Route path="/events" component={Events} />
 
       <Route
