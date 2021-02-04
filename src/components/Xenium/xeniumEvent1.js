@@ -1,4 +1,5 @@
-import { Container, Row, Col, Jumbotron, Button } from "react-bootstrap";
+import { Container, Row, Col, Jumbotron, Button, Image } from "react-bootstrap";
+import event1poster from "./event1poster.jpg";
 
 const xeniumEvent = () => {
   return (
@@ -15,9 +16,14 @@ const xeniumEvent = () => {
           participant is able to speak there will be points otherwise no point
           will be given. Decision of judges will be final.
         </Row>
+        <p></p>
         <Row>
-          <Col xs={12} md={6}>Event Poster</Col>
-          <Col style={{textAlign: "left"}} xs={12} md={6}>
+          {/* Size of the image is of pixel 300 x 300px */}
+          <Col xs={12} md={4}>
+            {" "}
+            <Image src={event1poster} rounded height="auto" width="auto" />
+          </Col>
+          <Col style={{ textAlign: "left" }} xs={12} md={8}>
             <h6>Rules</h6>
             1.This is a solo event.
             <br /> 2. We made a code which randomly selects topic for the
@@ -37,7 +43,9 @@ const xeniumEvent = () => {
         <p></p>
         <Row>
           <Button variant="primary">Register</Button>{" "}
-          <Button variant="success" disabled>Already Registered</Button>{" "}
+          <Button variant="success" disabled>
+            Already Registered
+          </Button>{" "}
           <Button variant="warning">Login First</Button>{" "}
         </Row>
       </Jumbotron>

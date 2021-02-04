@@ -34,7 +34,7 @@ class Navigation extends Component {
           <Navbar expand="lg" style={{ backgroundColor: "#9bc9c8" }}>
             <Navbar.Brand>
               <NavLink to="/" exact activeStyle={{ color: "white" }}>
-                Pariklan Image
+                <Image src={parikalan} rounded height="50px" width="70px" />
               </NavLink>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -48,11 +48,6 @@ class Navigation extends Component {
                 <Nav.Link>
                   <NavLink to="/clubs" activeStyle={{ color: "white" }}>
                     Clubs
-                  </NavLink>
-                </Nav.Link>
-                <Nav.Link>
-                  <NavLink to="/events" activeStyle={{ color: "white" }}>
-                    Events
                   </NavLink>
                 </Nav.Link>
                 <Nav.Link>
@@ -100,11 +95,7 @@ class Navigation extends Component {
                     Clubs
                   </NavLink>
                 </Nav.Link>
-                <Nav.Link>
-                  <NavLink to="/events" activeStyle={{ color: "white" }}>
-                    Events
-                  </NavLink>
-                </Nav.Link>
+
                 <Nav.Link>
                   <NavLink to="/xenium" activeStyle={{ color: "white" }}>
                     Xenium

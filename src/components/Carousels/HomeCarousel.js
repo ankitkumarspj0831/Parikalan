@@ -11,7 +11,7 @@ import home8 from "./Images/HomeCarousel/home8.JPG";
 const HomeCarousel = () => {
   return (
     <Container>
-      <Carousel>
+      <Carousel style={{ borderRadius: "5px" }}>
         <Carousel.Item>
           <img
             className="d-block w-100"

@@ -1,5 +1,4 @@
 import { Container, Card, CardDeck, Button, Jumbotron } from "react-bootstrap";
-import Parikalan from "../../parikalan.png";
 import { Link } from "react-router-dom";
 import CodeBotsLogo from "./Images/clubs/codebots.jpeg";
 import NetweaversLogo from './Images/clubs/netweavers.png';

@@ -1,12 +1,15 @@
 import { Container, Row, Col, Tab, Tabs } from "react-bootstrap";
 import XeniumVideo from "./xenium_video.mp4";
 import ContactUs from "../contactUs";
-import XeniumEvent from "./xeniumEvent";
+import XeniumEvent1 from "./xeniumEvent1";
+import XeniumEvent2 from "./xeniumEvent2";
+import XeniumEvent3 from "./xeniumEvent3";
+import XeniumEvent4 from "./xeniumEvent4";
 
 const xenium = () => {
   return (
     <Container style={{ textAlign: "left" }}>
-      <Row style={{alignItems:"center"}}>
+      <Row style={{ alignItems: "center" }}>
         <Col lg={4} md={6} xs={12} style={{ marginTop: "5px" }}>
           <video height="240px" width="320px" autoPlay loop>
             <source src={XeniumVideo} type="video/mp4" />
@@ -31,16 +34,16 @@ const xenium = () => {
       <p></p>
       <Tabs defaultActiveKey="event1">
         <Tab eventKey="event1" title="Impromptu Relay">
-          <XeniumEvent />
+          <XeniumEvent1 />
         </Tab>
-        <Tab eventKey="event2" title="Event2">
-          Tab 2
+        <Tab eventKey="event2" title="EWS Event">
+          <XeniumEvent2 />
         </Tab>
-        <Tab eventKey="event3" title="Event3">
-          Tab3
+        <Tab eventKey="event3" title="Web Designing">
+          <XeniumEvent3 />
         </Tab>
-        <Tab eventKey="event4" title="Event4">
-          Tab4
+        <Tab eventKey="event4" title="CodeCrusade">
+          <XeniumEvent4 />
         </Tab>
       </Tabs>
       <p></p>

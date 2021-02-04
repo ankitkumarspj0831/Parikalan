@@ -4,19 +4,19 @@ import PhoneIcon from "@material-ui/icons/Phone";
 
 const contactUs = () => {
   return (
-    <Container style={{backgroundColor: "lightcyan"}}>
+    <Container style={{ backgroundColor: "lightcyan", borderRadius: "10px" }}>
       <Row>
-        <Col xs={12}>
+        <Col xs={12} lg={6}>
           <center>
             <h4>
-              <EmailIcon /> email address
+              <EmailIcon /> parikalanpgdav@gmail.com
             </h4>
           </center>
         </Col>
-        <Col xs={12}>
+        <Col xs={12} lg={6}>
           <center>
             <h4>
-              <PhoneIcon />  9999999999
+              <PhoneIcon /> 9260906197
             </h4>
           </center>
         </Col>

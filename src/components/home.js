@@ -19,7 +19,7 @@ const home = (props) => {
   return (
     <Container fluid>
       {" "}
-      <Jumbotron fluid style={{ padding: "20px" }}>
+      <Jumbotron fluid style={{ padding: "20px" , borderRadius: "10px"}}>
         <h1>
           Parikalan <h2>The Computer Science Society of PGDAV College</h2>
         </h1>
@@ -58,6 +58,7 @@ const home = (props) => {
       <p></p>
       <Jumbotron>
         <Row>
+          <p></p>
           <Col xs={12} md={3}>
             <Image src={teacherInCharge} roundedCircle />
             <p></p>
@@ -101,20 +102,27 @@ const home = (props) => {
       </Jumbotron>
       <Jumbotron>
         <Row>
-          <Col xs={12} md={3}>
+          <Col xs={12} md={5}>
             <Image src={president} roundedCircle />
             <p></p>
             <p>
               <ul></ul>
-              <ul>
+              <ul style={{textAlign: "center"}}>
                 <h6>Nitish Gupta</h6>
+                <h4><i>President</i></h4>
               </ul>
             </p>
           </Col>
-          <Col xs={12} md={9}>
-            <center>
-              <h1>President</h1>
-            </center>
+          <Col xs={12} md={7}>
+            <h3><u>Word from the President</u></h3>
+            <div>
+              <p>This year we are organizing the Xenium online. </p>
+              <p>The entire fest is divided into 4 events.</p>
+              <p>Event1</p>
+              <p>Event2</p>
+              <p>Event3</p>
+              <p>Event4</p>
+            </div>
           </Col>
         </Row>
       </Jumbotron>

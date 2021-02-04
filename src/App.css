@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-image: url('./techh.jpg');
+  background-image: url("./b4.jpg");
   background-repeat: no-repeat;
   background-position: top;
   background-attachment: fixed;
@@ -36,9 +36,9 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(10px)
+    transform: translateY(10px);
   }
   100% {
-    transform: translateY(0px)
+    transform: translateY(0px);
   }
 }
