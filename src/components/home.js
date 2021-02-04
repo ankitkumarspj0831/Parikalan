@@ -1,19 +1,18 @@
 import {
   Container,
   Jumbotron,
-  Carousel,
   Row,
   Col,
   Image,
   Form,
   Button,
 } from "react-bootstrap";
-import iPhone12 from "../iphone12.jpg";
-import pic1 from "../pic1.jpeg";
-import pic2 from "../pic2.jpeg";
-import pic3 from "../pic3.jpeg";
-import pic4 from "../pic4.jpeg";
+import teacherInCharge from "../teacher-in-charge.png";
+import president from "../president.png";
 import xenium2021 from "../xenium2021.jpeg";
+import HomeCarousel from "./Carousels/HomeCarousel";
+import ContactUs from "./contactUs";
+import XeniumVideo from "./Xenium/xenium_video.mp4";
 
 const home = (props) => {
   console.log(props.location);
@@ -45,80 +44,34 @@ const home = (props) => {
           better humans.
         </p>
       </Jumbotron>
-      <Image
-        src={xenium2021}
-        fluid
-      />
+      <Row>
+        <Col lg={4} md={6} xs={12} style={{ marginTop: "5px" }}>
+          <video height="240px" width="320px" autoPlay loop>
+            <source src={XeniumVideo} type="video/mp4" />
+          </video>
+        </Col>
+        <Col>
+          <Image src={xenium2021} fluid margin="0 5px 5px 0" padding="auto" />
+        </Col>
+      </Row>
       <p></p>
-      <Carousel>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={pic1}
-            alt="First slide"
-            height="800px"
-            width="400px"
-          />
-          <Carousel.Caption>
-            {/*  <h3 style={{ color: "black" }}>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={pic2}
-            alt="First slide"
-            height="800px"
-            width="400px"
-          />
-          <Carousel.Caption>
-            {/*  <h3 style={{ color: "black" }}>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={pic3}
-            alt="First slide"
-            height="800px"
-            width="400px"
-          />
-          <Carousel.Caption>
-            {/*  <h3 style={{ color: "black" }}>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={pic4}
-            alt="First slide"
-            height="800px"
-            width="400px"
-          />
-          <Carousel.Caption>
-            {/*  <h3 style={{ color: "black" }}>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
       <p></p>
       <Jumbotron>
         <Row>
-          <Col xs={12} md={4}>
-            <Image src={iPhone12} roundedCircle />
+          <Col xs={12} md={3}>
+            <Image src={teacherInCharge} roundedCircle />
             <p></p>
             <p>
               <ul></ul>
               <ul>
-                <h6>Dr. Ravish Sharma</h6>
+                <h6 style={{ textAlign: "center" }}>Dr. Ravish Sharma</h6>
               </ul>
             </p>
           </Col>
-          <Col xs={12} md={8}>
-            <h3>Message from Teacher-Incharge</h3>
+          <Col xs={12} md={9}>
+            <h3>
+              <u>Message from Teacher-Incharge</u>
+            </h3>
             <div>
               <p>
                 Dear Students Welcome to Parikalan, The Computer Science Society
@@ -146,6 +99,26 @@ const home = (props) => {
           </Col>
         </Row>
       </Jumbotron>
+      <Jumbotron>
+        <Row>
+          <Col xs={12} md={3}>
+            <Image src={president} roundedCircle />
+            <p></p>
+            <p>
+              <ul></ul>
+              <ul>
+                <h6>Nitish Gupta</h6>
+              </ul>
+            </p>
+          </Col>
+          <Col xs={12} md={9}>
+            <center>
+              <h1>President</h1>
+            </center>
+          </Col>
+        </Row>
+      </Jumbotron>
+      <HomeCarousel />
       <Jumbotron style={{ backgroundColor: "lightblue" }}>
         <h1>Send us your queries.</h1>
         <Form style={{ width: "75%", margin: "auto" }}>
@@ -176,6 +149,7 @@ const home = (props) => {
           </Button>
         </Form>
       </Jumbotron>
+      <ContactUs />
     </Container>
   );
 };

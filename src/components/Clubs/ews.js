@@ -59,12 +59,7 @@ const ews = () => {
         <Row>
           <Col xs={6} md={4}>
             <Figure>
-              <Figure.Image
-                src={veenu}
-                roundedCircle
-                height="180px"
-                width="170px"
-              />
+              <Figure.Image src={veenu} roundedCircle />
               <Figure.Caption>
                 <strong>Dr. Veenu Bhasin</strong>
               </Figure.Caption>
@@ -72,12 +67,7 @@ const ews = () => {
           </Col>
           <Col xs={6} md={4}>
             <Figure>
-              <Figure.Image
-                src={aparna}
-                roundedCircle
-                height="180px"
-                width="170px"
-              />
+              <Figure.Image src={aparna} roundedCircle />
               <Figure.Caption>
                 <strong>Dr. Aparna Dutt</strong>
               </Figure.Caption>
@@ -103,12 +93,7 @@ const ews = () => {
           </Col>
           <Col xs={6} md={4}>
             <Figure>
-              <Figure.Image
-                src={ansh}
-                roundedCircle
-                height="180px"
-                width="170px"
-              />
+              <Figure.Image src={ansh} roundedCircle />
               <Figure.Caption>
                 <strong>
                   Ansh Goyal
@@ -136,12 +121,7 @@ const ews = () => {
           </Col>
           <Col xs={6} md={4}>
             <Figure>
-              <Figure.Image
-                src={arpita}
-                roundedCircle
-                height="180px"
-                width="170px"
-              />
+              <Figure.Image src={arpita} roundedCircle />
               <Figure.Caption>
                 <strong>
                   Arpita Dixit
@@ -155,12 +135,7 @@ const ews = () => {
           </Col>
           <Col xs={6} md={4}>
             <Figure>
-              <Figure.Image
-                src={ashutosh}
-                roundedCircle
-                height="180px"
-                width="170px"
-              />
+              <Figure.Image src={ashutosh} roundedCircle />
               <Figure.Caption>
                 <strong>
                   Ashutosh Gangwar
@@ -174,12 +149,7 @@ const ews = () => {
           </Col>
           <Col xs={6} md={4}>
             <Figure>
-              <Figure.Image
-                src={nishtha}
-                roundedCircle
-                height="180px"
-                width="170px"
-              />
+              <Figure.Image src={nishtha} roundedCircle />
               <Figure.Caption>
                 <strong>
                   Nishtha Mahajan

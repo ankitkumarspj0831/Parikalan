@@ -6,8 +6,8 @@ import "./bottom-navigation.css";
 
 const bottomNavigation = () => {
   return (
-    <Container>
-      <Row>
+    <Container >
+      <Row style={{color: "white"}}>
         <Col className="col1" xs={12}>
           <h6> &copy; 2021- Parikalan PGDAV. All rights reserved.</h6>
         </Col>

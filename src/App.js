@@ -10,10 +10,12 @@ import SignIn from "./Containers/SignIn/SignIn";
 import Clubs from "./components/Clubs/clubs";
 import Netweavers from "./components/Clubs/netweavers";
 import EWS from "./components/Clubs/ews";
+import QuizBots from "./components/Clubs/quizbots";
+import CodeBots from "./components/Clubs/codebots";
 import PageNotFound from "./components/pageNotFound";
 import BottomNavigation from "./components/Navigation/bottom-navigation";
-import Events from "./components/events";
-import Xenium from "./components/xenium";
+/* import Events from "./components/events"; */
+import Xenium from "./components/Xenium/xenium";
 
 class App extends Component {
   state = {
@@ -102,9 +104,11 @@ class App extends Component {
       <Route path="/" exact component={Home} />
       <Route path="/clubs" exact component={Clubs} />
       <Route path="/xenium" exact component={Xenium} />
-      <Route path="/clubs/netweavers" component={Netweavers} />
-      <Route path="/clubs/ews" component={EWS} />
-      <Route path="/events" component={Events} />
+      <Route path="/clubs/netweavers" exact component={Netweavers} />
+      <Route path="/clubs/ews" exact component={EWS} />
+      <Route path="/clubs/quizbots" exact component={QuizBots} />
+      <Route path="/clubs/codebots" exact component={CodeBots} />
+      {/* <Route path="/events" exact component={Events} /> */}
 
       <Route
         path="/auth/signin"

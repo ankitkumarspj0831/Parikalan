@@ -1,26 +1,14 @@
 import React from "react";
 import "./styles.css";
-import Figure from "react-bootstrap/Figure";
-import mentor1 from "./Images/mentor1.png";
-import mentor2 from "./Images/mentor2.png";
-import member1 from "./Images/member1.png";
-import member2 from "./Images/member2.png";
-import member3 from "./Images/member3.png";
-import member4 from "./Images/member4.png";
-import member5 from "./Images/member5.png";
-import event1 from "./Images/poster1.png";
-import event2 from "./Images/poster2.png";
-import event3 from "./Images/poster3.png";
-import event4 from "./Images/poster4.png";
-import event5 from "./Images/poster5.png";
-import {
-  Image,
-  Row,
-  Col,
-  Carousel,
-  Container,
-  Jumbotron,
-} from "react-bootstrap";
+import ankit from "./Images/netweavers/ankit.png";
+import adya from "./Images/netweavers/adya.png";
+import akanksha from "./Images/netweavers/akanksha.png";
+import preksha from "./Images/netweavers/preksha.png";
+import roshan from "./Images/netweavers/roshan.png";
+import ravish from './Images/netweavers/ravish.png';
+import demogg from './Images/demogg.png';
+
+import { Figure, Row, Col, Container } from "react-bootstrap";
 
 const netweavers = () => {
   return (
@@ -30,31 +18,35 @@ const netweavers = () => {
       <figure>
         <blockquote class="blockquote">
           <p>
-            “Understanding the fundamental principles of coding gives one an
-            insight to more complex systems, how technology is layered, and how
-            simple systems can be developed into more complex ones.”
+          “Websites promote you 24/7: No employee will do that.”
           </p>
         </blockquote>
         <figcaption class="blockquote-footer">
-          By <cite title="Source Title">Trudy Norris-Grey</cite>
+          By <cite title="Source Title">Paul Cookson</cite>
         </figcaption>
       </figure>
       <br />
       <p>
         <strong>
           <i>
-            Coding is one of the most important aspect of Tech World. We at
-            Codebots, The Coding Club of Parikalan tries our level best to
-            create a community of fine coders who can take part in different
-            competitions organised in and outside the campus.
+            "Speak clearly if you speak at all; carve every word before you let
+            it fall." What's the use of having so much knowledge if you can't
+            put it forward in a good way?
             <br />
-            The Team Codebots works to promote Competitive Coding and tries its
-            level best to make every Computer Science student aware about the
-            importance of Competitive Coding.
+            This is exactly what EWS Club of Parikalan aims at. As the name
+            implies EWS i.e., Elocution, Workshop and Seminar Club has only one
+            motive: to develop interpersonal and intrapersonal skills of the
+            students. And the pandemic was not a hurdle in the way. The members
+            organise various activities such as quiz competition, essay writing,
+            paper presentation etc. to enhance the said skills. Previously, the
+            club had also organised some illuminating seminars and webinars by
+            some renowned speakers who not only engaged with students but also
+            imparted their valuable knowledge.
             <br />
-            We organise various Coding Competitions that can help the students
-            to not only enhance their Coding skills but which also help them to
-            develop their logical thinking.
+            EWS Club gives students a chance to take part in any activity
+            irrespective of their field of study. The club plans to increase the
+            seminars in the upcoming semester and this time students will also
+            get to present their sessions.
           </i>
         </strong>
       </p>
@@ -64,17 +56,17 @@ const netweavers = () => {
         <Row>
           <Col xs={6} md={4}>
             <Figure>
-              <Figure.Image src={mentor1} />
+              <Figure.Image src={ravish} roundedCircle />
               <Figure.Caption>
-                <strong>Mrs. Kirti Yadav</strong>
+                <strong>Dr. Ravish Sharma</strong>
               </Figure.Caption>
             </Figure>
           </Col>
           <Col xs={6} md={4}>
             <Figure>
-              <Figure.Image src={mentor2} />
+              <Figure.Image src={demogg} roundedCircle />
               <Figure.Caption>
-                <strong>Mrs. Purnima Bindal</strong>
+                <strong>Dr. Charu Puri</strong>
               </Figure.Caption>
             </Figure>
           </Col>
@@ -84,10 +76,10 @@ const netweavers = () => {
         <Row>
           <Col xs={6} md={4}>
             <Figure>
-              <Figure.Image src={member1} roundedCircle />
+              <Figure.Image src={ankit} roundedCircle />
               <Figure.Caption>
                 <strong>
-                  Arpit Samadhiya
+                  Ankit Kumar
                   <br />
                   B.Sc. H Comp Science
                   <br />
@@ -98,10 +90,10 @@ const netweavers = () => {
           </Col>
           <Col xs={6} md={4}>
             <Figure>
-              <Figure.Image src={member2} roundedCircle />
+              <Figure.Image src={adya} roundedCircle />
               <Figure.Caption>
                 <strong>
-                  Yamini Sharma
+                  Adya Mishra
                   <br />
                   B.Sc. H Comp Science
                   <br />
@@ -112,10 +104,24 @@ const netweavers = () => {
           </Col>
           <Col xs={6} md={4}>
             <Figure>
-              <Figure.Image src={member5} roundedCircle />
+              <Figure.Image src={preksha} roundedCircle />
               <Figure.Caption>
                 <strong>
-                  Markandey Upadhyay
+                  Preksha
+                  <br />
+                  Mathematical Science
+                  <br />
+                  IInd Year
+                </strong>
+              </Figure.Caption>
+            </Figure>
+          </Col>
+          <Col xs={6} md={4}>
+            <Figure>
+              <Figure.Image src={akanksha} roundedCircle />
+              <Figure.Caption>
+                <strong>
+                  Akanksha Jain
                   <br />
                   B.Sc. H Comp Science
                   <br />
@@ -126,35 +132,21 @@ const netweavers = () => {
           </Col>
           <Col xs={6} md={4}>
             <Figure>
-              <Figure.Image src={member4} roundedCircle />
+              <Figure.Image src={roshan} roundedCircle />
               <Figure.Caption>
                 <strong>
-                  Anwesha Sanyal
+                  Roshan Kumar
                   <br />
                   B.Sc. H Comp Science
                   <br />
-                  Ist Year
-                </strong>
-              </Figure.Caption>
-            </Figure>
-          </Col>
-          <Col xs={6} md={4}>
-            <Figure>
-              <Figure.Image src={member3} roundedCircle />
-              <Figure.Caption>
-                <strong>
-                  Meghansh Tyagi
-                  <br />
-                  B.Sc. H Comp Science
-                  <br />
-                  Ist Year
+                  IInd Year
                 </strong>
               </Figure.Caption>
             </Figure>
           </Col>
         </Row>
       </Container>
-      <h1 className="head2">Achievements</h1>
+      {/* <h1 className="head2">Achievements</h1>
       <Carousel>
         <Carousel.Item interval={1000}>
           <img
@@ -191,7 +183,9 @@ const netweavers = () => {
             alt="Third slide"
           />
         </Carousel.Item>
-      </Carousel>
+      </Carousel> */}
+      <p></p>
+      <p></p>
     </Container>
   );
 };
