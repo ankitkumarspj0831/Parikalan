@@ -5,6 +5,13 @@ import { NavLink } from "react-router-dom";
 import parikalan from "../../parikalan.png";
 
 class Navigation extends Component {
+  state = {
+    expanded: false,
+  };
+  toggle = () => {
+    this.setState({ expanded: !this.state.expanded });
+  };
+
   logoutClicked = () => {
     fetch("http://localhost:8000/auth/logout", {
       method: "POST",
@@ -31,9 +38,21 @@ class Navigation extends Component {
     if (this.props.isLoggedIn) {
       return (
         <div className="classes.navLinks">
-          <Navbar expand="lg" style={{ backgroundColor: "#9bc9c8" }}>
+          <Navbar
+            expand="lg"
+            style={{ backgroundColor: "#9bc9c8" }}
+            expanded={this.state.expanded}
+            onToggle={this.toggle}
+          >
             <Navbar.Brand>
-              <NavLink to="/" exact activeStyle={{ color: "white" }}>
+              <NavLink
+                to="/"
+                exact
+                activeStyle={{ color: "white" }}
+                onClick={() => {
+                  this.setState({ expanded: false });
+                }}
+              >
                 <Image src={parikalan} rounded height="50px" width="70px" />
               </NavLink>
             </Navbar.Brand>
@@ -41,24 +60,41 @@ class Navigation extends Component {
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto">
                 <Nav.Link>
-                  <NavLink to="/" exact activeStyle={{ color: "white" }}>
+                  <NavLink
+                    to="/"
+                    exact
+                    activeStyle={{ color: "white" }}
+                    onClick={this.toggle}
+                  >
                     Home
                   </NavLink>
                 </Nav.Link>
                 <Nav.Link>
-                  <NavLink to="/clubs" activeStyle={{ color: "white" }}>
+                  <NavLink
+                    to="/clubs"
+                    activeStyle={{ color: "white" }}
+                    onClick={this.toggle}
+                  >
                     Clubs
                   </NavLink>
                 </Nav.Link>
                 <Nav.Link>
-                  <NavLink to="/xenium" activeStyle={{ color: "white" }}>
+                  <NavLink
+                    to="/xenium"
+                    activeStyle={{ color: "white" }}
+                    onClick={this.toggle}
+                  >
                     Xenium
                   </NavLink>
                 </Nav.Link>
               </Nav>
 
               <Nav>
-                <Nav.Link className="mr-sm-2" onClick={this.logoutClicked}>
+                <Nav.Link
+                  className="mr-sm-2"
+                  onClick={this.logoutClicked}
+                  onClick={this.toggle}
+                >
                   {/* <NavLink
                     to="/auth/logout"
                     activeStyle={{ color: "white" }}
@@ -76,9 +112,21 @@ class Navigation extends Component {
     } else {
       return (
         <div className="classes.navLinks">
-          <Navbar expand="lg" style={{ backgroundColor: "#9bc9c8" }}>
+          <Navbar
+            expand="lg"
+            style={{ backgroundColor: "#9bc9c8" }}
+            expanded={this.state.expanded}
+            onToggle={this.toggle}
+          >
             <Navbar.Brand>
-              <NavLink to="/" exact activeStyle={{ color: "white" }}>
+              <NavLink
+                to="/"
+                exact
+                activeStyle={{ color: "white" }}
+                onClick={() => {
+                  this.setState({ expanded: false });
+                }}
+              >
                 <Image src={parikalan} rounded height="50px" width="70px" />
               </NavLink>
             </Navbar.Brand>
@@ -86,31 +134,51 @@ class Navigation extends Component {
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto">
                 <Nav.Link>
-                  <NavLink to="/" exact activeStyle={{ color: "white" }}>
+                  <NavLink
+                    to="/"
+                    exact
+                    activeStyle={{ color: "white" }}
+                    onClick={this.toggle}
+                  >
                     Home
                   </NavLink>
                 </Nav.Link>
                 <Nav.Link>
-                  <NavLink to="/clubs" activeStyle={{ color: "white" }}>
+                  <NavLink
+                    to="/clubs"
+                    activeStyle={{ color: "white" }}
+                    onClick={this.toggle}
+                  >
                     Clubs
                   </NavLink>
                 </Nav.Link>
 
                 <Nav.Link>
-                  <NavLink to="/xenium" activeStyle={{ color: "white" }}>
+                  <NavLink
+                    to="/xenium"
+                    activeStyle={{ color: "white" }}
+                    onClick={this.toggle}
+                  >
                     Xenium
                   </NavLink>
                 </Nav.Link>
               </Nav>
-
               <Nav>
                 <Nav.Link className="mr-sm-2">
-                  <NavLink to="/auth/signin" activeStyle={{ color: "white" }}>
+                  <NavLink
+                    to="/auth/signin"
+                    activeStyle={{ color: "white" }}
+                    onClick={this.toggle}
+                  >
                     SignIn
                   </NavLink>
                 </Nav.Link>
                 <Nav.Link className="mr-sm-2">
-                  <NavLink to="/auth/signup" activeStyle={{ color: "white" }}>
+                  <NavLink
+                    to="/auth/signup"
+                    activeStyle={{ color: "white" }}
+                    onClick={this.toggle}
+                  >
                     SignUp
                   </NavLink>
                 </Nav.Link>
