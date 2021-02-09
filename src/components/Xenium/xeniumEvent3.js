@@ -1,7 +1,52 @@
 import { Container, Row, Col, Jumbotron, Button, Image } from "react-bootstrap";
 import event1poster from "./event1poster.jpg";
+import { connect } from "react-redux";
 
-const xeniumEvent = () => {
+const xeniumEvent3 = (props) => {
+  const userId = localStorage.getItem("userId");
+  const eventNumber = 3;
+  const registerButton = () => {
+    fetch("http://localhost:8000/event", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        userId: userId,
+        eventNumber: eventNumber,
+      }),
+    })
+      .then((res) => {
+        return res.json();
+      })
+      .then((resData) => {
+        console.log("Success");
+        console.log(resData);
+        props.event3True();
+      })
+      .catch((err) => {
+        console.log("Error");
+        console.log(err);
+      });
+    alert("Registered for 3rd Event");
+  };
+  let button;
+  let registered = props.event3;
+  if (props.isLoggedIn && registered) {
+    button = (
+      <Button variant="success" disabled>
+        Already Registered
+      </Button>
+    );
+  } else if (props.isLoggedIn) {
+    button = (
+      <Button variant="primary" onClick={registerButton}>
+        Register
+      </Button>
+    );
+  } else {
+    button = <Button disabled>Login To Register</Button>;
+  }
   return (
     <Container>
       <p></p>
@@ -42,16 +87,23 @@ const xeniumEvent = () => {
           </Col>
         </Row>
         <p></p>
-        <Row>
-          <Button variant="primary">Register</Button>{" "}
-          <Button variant="success" disabled>
-            Already Registered
-          </Button>{" "}
-          <Button variant="warning">Login First</Button>{" "}
-        </Row>
+        <Row>{button}</Row>
       </Jumbotron>
     </Container>
   );
 };
 
-export default xeniumEvent;
+const mapStateToProps = (state) => {
+  return {
+    isLoggedIn: state.isLoggedIn,
+    event3: state.event3,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    event3True: () => dispatch({ type: "event3" }),
+  };
+};
+
+export default connect(mapStateToProps,mapDispatchToProps)(xeniumEvent3);

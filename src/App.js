@@ -16,6 +16,11 @@ import PageNotFound from "./components/pageNotFound";
 import BottomNavigation from "./components/Navigation/bottom-navigation";
 /* import Events from "./components/events"; */
 import Xenium from "./components/Xenium/xenium";
+import Event1 from "./components/admin/event1";
+import Event2 from "./components/admin/event2";
+import Event3 from "./components/admin/event3";
+import Event4 from "./components/admin/event4";
+import Queries from "./components/admin/queries";
 
 class App extends Component {
   state = {
@@ -62,7 +67,7 @@ class App extends Component {
       })
       .then((resData) => {
         console.log(resData);
-        this.props.onSuccess(); // redux to set is logged in to true
+        this.props.onSuccess(); // redux to set isloggedin to true
         this.setState({
           isAuth: true,
           token: resData.token,
@@ -108,6 +113,12 @@ class App extends Component {
       <Route path="/clubs/ews" exact component={EWS} />
       <Route path="/clubs/quizbots" exact component={QuizBots} />
       <Route path="/clubs/codebots" exact component={CodeBots} />
+      <Route path="/admin/event1" exact component={Event1} />
+      <Route path="/admin/event2" exact component={Event2} />
+      <Route path="/admin/event3" exact component={Event3} />
+      <Route path="/admin/event4" exact component={Event4} />
+      <Route path="/admin/queries" exact component={Queries} />
+
       {/* <Route path="/events" exact component={Events} /> */}
 
       <Route

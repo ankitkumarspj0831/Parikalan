@@ -6,7 +6,39 @@ import XeniumEvent2 from "./xeniumEvent2";
 import XeniumEvent3 from "./xeniumEvent3";
 import XeniumEvent4 from "./xeniumEvent4";
 
-const xenium = () => {
+import { connect } from "react-redux";
+import { useEffect } from "react";
+
+const Xenium = (props) => {
+  const count = 0;
+
+  useEffect(() => {}, [count]);
+  const userId = localStorage.userId;
+  fetch("http://localhost:8000/events", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      userId: userId,
+    }),
+  })
+    .then((res) => {
+      return res.json();
+    })
+    .then((resData) => {
+      console.log("ResData: " + resData.eventsArray);
+      if (resData.message === "success") {
+        if (resData.eventsArray[0]) props.event1True();
+        if (resData.eventsArray[1]) props.event2True();
+        if (resData.eventsArray[2]) props.event3True();
+        if (resData.eventsArray[3]) props.event4True();
+      }
+    })
+    .catch((err) => {
+      console.log("Error");
+      console.log(err);
+    });
   return (
     <Container style={{ textAlign: "left" }}>
       <Row style={{ alignItems: "center" }}>
@@ -53,4 +85,13 @@ const xenium = () => {
   );
 };
 
-export default xenium;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    event1True: () => dispatch({ type: "event1" }),
+    event2True: () => dispatch({ type: "event2" }),
+    event3True: () => dispatch({ type: "event3" }),
+    event4True: () => dispatch({ type: "event4" }),
+  };
+};
+
+export default connect(null, mapDispatchToProps)(Xenium);

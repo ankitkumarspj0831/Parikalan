@@ -13,7 +13,13 @@ class Navigation extends Component {
   };
 
   logoutClicked = () => {
-    fetch("http://localhost:8000/auth/logout", {
+    console.log("Logout clicked");
+    this.toggle();
+    this.props.isLoggedOut();
+    localStorage.removeItem("token");
+    localStorage.removeItem("expiryDate");
+    localStorage.removeItem("userId");
+    /* fetch("http://localhost:8000/auth/logout", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -32,7 +38,7 @@ class Navigation extends Component {
       .catch((err) => {
         console.log("Error fetching the logout.");
         console.log("Error: " + err);
-      });
+      }); */
   };
   render() {
     if (this.props.isLoggedIn) {
@@ -90,11 +96,7 @@ class Navigation extends Component {
               </Nav>
 
               <Nav>
-                <Nav.Link
-                  className="mr-sm-2"
-                  onClick={this.logoutClicked}
-                  onClick={this.toggle}
-                >
+                <Nav.Link className="mr-sm-2" onClick={this.logoutClicked}>
                   {/* <NavLink
                     to="/auth/logout"
                     activeStyle={{ color: "white" }}

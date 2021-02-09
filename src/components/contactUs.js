@@ -16,7 +16,7 @@ const contactUs = () => {
         <Col xs={12} lg={6}>
           <center>
             <h4>
-              <PhoneIcon /> 9260906197
+              <PhoneIcon /> 9260906197- Nitish Gupta
             </h4>
           </center>
         </Col>

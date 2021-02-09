@@ -1,12 +1,12 @@
 import { Carousel, Container } from "react-bootstrap";
-import home1 from "./Images/HomeCarousel/home1.JPG";
-import home2 from "./Images/HomeCarousel/home2.JPG";
-import home3 from "./Images/HomeCarousel/home3.JPG";
-import home4 from "./Images/HomeCarousel/home4.JPG";
+import home1 from "./Images/HomeCarousel/home1.jpg";
+import home2 from "./Images/HomeCarousel/home2.jpg";
+import home3 from "./Images/HomeCarousel/home3.jpg";
+import home4 from "./Images/HomeCarousel/home4.jpg";
 import home5 from "./Images/HomeCarousel/home5.jpg";
-import home6 from "./Images/HomeCarousel/home6.JPG";
-import home7 from "./Images/HomeCarousel/home7.JPG";
-import home8 from "./Images/HomeCarousel/home8.JPG";
+import home6 from "./Images/HomeCarousel/home6.jpg";
+import home7 from "./Images/HomeCarousel/home7.jpg";
+import home8 from "./Images/HomeCarousel/home8.jpg";
 
 const HomeCarousel = () => {
   return (
