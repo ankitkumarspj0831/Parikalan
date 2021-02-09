@@ -22,7 +22,7 @@ class home extends Component {
     var phone = document.getElementById("queryform").phone.value;
     var email = document.getElementById("queryform").email.value;
     var query = document.getElementById("queryform").query.value;
-    fetch("http://localhost:8000/admin/queries", {
+    fetch("https://parikalanpgdav.herokuapp.com/admin/queries", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -6,7 +6,7 @@ class Event1 extends Component {
     eventregistrations: [],
   };
   componentDidMount() {
-    fetch("http://localhost:8000/admin/event1", {
+    fetch("https://parikalanpgdav.herokuapp.com/admin/event1", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

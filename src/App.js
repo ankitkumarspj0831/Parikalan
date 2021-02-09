@@ -52,7 +52,7 @@ class App extends Component {
   loginHandler = (event, authData) => {
     console.log("inside login handler");
     event.preventDefault();
-    fetch("http://localhost:8000/auth/signin", {
+    fetch("https://parikalanpgdav.herokuapp.com/auth/signin", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -6,7 +6,7 @@ class Queries extends Component {
     fetchedqueries: [],
   };
   componentDidMount() {
-    fetch("http://localhost:8000/admin/fetchqueries", {
+    fetch("https://parikalanpgdav.herokuapp.com/admin/fetchqueries", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
