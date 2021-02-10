@@ -1,13 +1,13 @@
 import { Container, Row, Col, Jumbotron, Button, Image } from "react-bootstrap";
 import event4poster from "./event4poster.jpg";
 import { connect } from "react-redux";
-import ScheduleIcon from '@material-ui/icons/Schedule';
+import ScheduleIcon from "@material-ui/icons/Schedule";
 
 const xeniumEvent4 = (props) => {
   const userId = localStorage.getItem("userId");
   const eventNumber = 4;
   const registerButton = () => {
-    fetch("http://localhost:8000/event", {
+    fetch("https://parikalanpgdav.herokuapp.com/event", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -67,7 +67,7 @@ const xeniumEvent4 = (props) => {
             <Image src={event4poster} rounded height="auto" width="auto" />
           </Col>
           <Col style={{ textAlign: "left" }} xs={12} md={8}>
-          <ScheduleIcon/> 11:00 am - 12:00 pm
+            <ScheduleIcon /> 11:00 am - 12:00 pm
             <h4>Rules</h4>
             1.) Time Allotted:  60 minutes.
             <br /> 2.) Total questions: 3 <br />
@@ -80,7 +80,8 @@ const xeniumEvent4 = (props) => {
             criteria.Decisions of the organisers will be final and binding.
             <br />
             6.) Platform: Hackerrank <br />
-            7.) All the Languages available for a particular question are allowed for coding.
+            7.) All the Languages available for a particular question are
+            allowed for coding.
             <br /> 8.) DM in Event's WhatsApp Group for any Query or Assistance
             <p></p>
             <h5>

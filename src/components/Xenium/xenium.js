@@ -14,7 +14,7 @@ const Xenium = (props) => {
 
   useEffect(() => {}, [count]);
   const userId = localStorage.userId;
-  fetch("http://localhost:8000/events", {
+  fetch("https://parikalanpgdav.herokuapp.com/events", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

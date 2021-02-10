@@ -19,7 +19,7 @@ class Signup extends Component {
   onSubmit = (event) => {
     event.preventDefault();
     console.log(this.state);
-    fetch("http://localhost:8000/auth/signup", {
+    fetch("https://parikalanpgdav.herokuapp.com/auth/signup", {
       method: "POST",
       headers: {
         "Content-type": "application/json",

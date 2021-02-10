@@ -7,7 +7,7 @@ const xeniumEvent1 = (props) => {
   const userId = localStorage.getItem("userId");
   const eventNumber = 1;
   const registerButton = () => {
-    fetch("http://localhost:8000/event", {
+    fetch("https://parikalanpgdav.herokuapp.com/event", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
