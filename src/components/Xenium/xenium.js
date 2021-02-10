@@ -64,17 +64,17 @@ const Xenium = (props) => {
       <hr></hr>
       <hr></hr>
       <p></p>
-      <Tabs defaultActiveKey="event1">
-        <Tab eventKey="event1" title="Impromptu Relay">
+      <Tabs defaultActiveKey="event2">
+        <Tab eventKey="event1" title="🗣️Impromptu Relay 🧏🏻‍♂️">
           <XeniumEvent1 />
         </Tab>
-        <Tab eventKey="event2" title="EWS Event">
+        <Tab eventKey="event2" title="Group Discussion">
           <XeniumEvent2 />
         </Tab>
         <Tab eventKey="event3" title="Web Designing">
           <XeniumEvent3 />
         </Tab>
-        <Tab eventKey="event4" title="CodeCrusade">
+        <Tab eventKey="event4" title="🖥️Code Crusade🖥️">
           <XeniumEvent4 />
         </Tab>
       </Tabs>

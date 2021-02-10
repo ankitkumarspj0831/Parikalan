@@ -1,6 +1,7 @@
 import { Container, Row, Col, Jumbotron, Button, Image } from "react-bootstrap";
-import event1poster from "./event1poster.jpg";
+import event3poster from "./event3poster.jpg";
 import { connect } from "react-redux";
+import ScheduleIcon from '@material-ui/icons/Schedule';
 
 const xeniumEvent3 = (props) => {
   const userId = localStorage.getItem("userId");
@@ -54,36 +55,42 @@ const xeniumEvent3 = (props) => {
         <Row>
           <p>There will be two rounds for this event.</p>
           <p>
-            <b>Round1: </b>
-            This round will consist of 40 questions on HTML, CSS and JavaScript.
-            All questions will be in the format of multiple choice questions.
-            Duration for this will be 20 Minutes Max.
+            <b>Round1: </b> This round will consist of 40 questions on HTML, CSS
+            and JavaScript. All questions will be in the format of
+            multiple-choice questions. Duration for this will be 20 minutes.
           </p>
           <p>
-            <b>Round2: </b>
-            In this round, shortlisted participants from Round 1 will need to
-            design website based on any one of competition topics in 90 minutes
-            using permitted development tools.
+            <b>Round2:</b> In this round, shortlisted participants from Round 1
+            will need to design a web page based on provided structure in 30
+            minutes using permitted development tools.
           </p>
+          <p></p>
         </Row>
         <Row>
           {/* Size of the image is of pixel 300 x 300px */}
           <Col xs={12} md={4}>
             {" "}
-            <Image src={event1poster} rounded height="auto" width="auto" />
+            <Image src={event3poster} rounded height="auto" width="auto" />
           </Col>
           <Col style={{ textAlign: "left" }} xs={12} md={8}>
-            <h6>Rules</h6>
-            1. This is a solo event.
-            <br /> 2. Programming Language HTML,CSS and JavaScript.
-            <br />
-            3. Students have to design a web-site on any one of the specified
-            topics and present it to the judges.
-            <br />
-            4. Participants will be given the structure of the webpage.
-            <br />
-            5. Decision of the judges will be final.
-            <br />
+          <ScheduleIcon/> 12:30 pm - 2:00 pm
+            <h4>Rules</h4>
+            1) This is a solo event.
+            <br /> 2) Programming Languages: HTML, CSS and JavaScript.
+            <br /> 3) Participants will be given the structure of the webpage.
+            <br /> 4) Assessment will be done on the basis of resemblance to the
+            sample output and cleanliness of code.
+            <br /> 5) Decision of the judges will be final
+            <p></p>
+            <h5>
+              <u>Event Coordinator</u>
+            </h5>
+            <p>
+              <b>Ankit Kumar</b> 9145823334
+            </p>
+            <p>
+              <b>Adya</b> 6202908726
+            </p>
           </Col>
         </Row>
         <p></p>
@@ -106,4 +113,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps,mapDispatchToProps)(xeniumEvent3);
+export default connect(mapStateToProps, mapDispatchToProps)(xeniumEvent3);

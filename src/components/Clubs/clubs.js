@@ -1,9 +1,9 @@
 import { Container, Card, CardDeck, Button, Jumbotron } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import CodeBotsLogo from "./Images/clubs/codebots.jpeg";
-import NetweaversLogo from './Images/clubs/netweavers.png';
-import QuizBotsLogo from './Images/clubs/quizbots.png';
-import EWSLogo from './Images/clubs/ews.png';
+import NetweaversLogo from "./Images/clubs/netweavers.png";
+import QuizBotsLogo from "./Images/clubs/quizbots.png";
+import EWSLogo from "./Images/clubs/ews.png";
 
 const clubs = (props) => {
   const clubsInfo = [
@@ -13,7 +13,7 @@ const clubs = (props) => {
       content: "Club for Web Development",
       path: "/clubs/netweavers",
     },
-    
+
     {
       imageSrc: QuizBotsLogo,
       title: "Quizbots",
@@ -29,7 +29,7 @@ const clubs = (props) => {
     {
       imageSrc: EWSLogo,
       title: "EWS",
-      content: "Club for Workshops and Seminars ",
+      content: "Club for Elocution, Workshops and Seminars ",
       path: "/clubs/ews",
     },
   ];

@@ -1,6 +1,7 @@
 import { Container, Row, Col, Jumbotron, Button, Image } from "react-bootstrap";
 import event1poster from "./event1poster.jpg";
 import { connect } from "react-redux";
+import ScheduleIcon from '@material-ui/icons/Schedule';
 
 const xeniumEvent2 = (props) => {
   const userId = localStorage.getItem("userId");
@@ -52,9 +53,12 @@ const xeniumEvent2 = (props) => {
       <p></p>
       <Jumbotron>
         <Row>
-          There will be a group of 10 people. A topic or a situation (case
-          study) will be provided to the group, 6 or 7 mins prior discussion.
-          The duration of the group discussion is 30 mins.
+          <p>There will be a group of 10 people.</p>
+          <br />
+          <p>
+            A topic or a situation (case study) will be provided to the group, 6
+            or 7 mins prior to the discussion.
+          </p>
         </Row>
         <p></p>
         <Row>
@@ -64,26 +68,34 @@ const xeniumEvent2 = (props) => {
             <Image src={event1poster} rounded height="auto" width="auto" />
           </Col>
           <Col style={{ textAlign: "left" }} xs={12} md={8}>
-            <h6>Rules</h6>
-            The panellists will observe each candidate on the following
-            parameters:
-            <br />
-            1. Communication skills
-            <br /> 2. Listening power
-            <br /> 3. Attitude
-            <br />
-            4. Confidence
-            <br /> 5. Way of presenting views
-            <br /> 6. Interaction skills
-            <br /> 7. Leadership skills
-            <br />
-            And then the one with the highest scores will be the winner.
-            <br />
-            <b>Note: </b>
-            The number of groups and GDs completely depend on the number of
-            participants.
-            <br />
-            <b>Topics:</b> Factual or adaptive
+          <ScheduleIcon/> 4:30 pm - 6:00 pm
+            <h4>Rules</h4> 1) There will be a group of 10 people.
+            <br /> 2) A topic or a situation (case study) will be provided to
+            the group, 6 or 7 mins prior to the discussion.
+            <br /> 3) The duration of the group discussion is 30 mins.
+            <br /> 4) The panellists will observe each candidate on the
+            following parameters:
+            <ul>
+              <li>Communication skills</li>
+              <li>Listening power</li>
+              <li>Attitude</li>
+              <li>Confidence</li>
+              <li>Way of presenting views</li>
+              <li>Interaction skills</li>
+              <li>Leadership skills </li>
+            </ul>
+            5) The one with the highest score as per the panelists , will be the
+            winner.
+            <p></p>
+            <h5>
+              <u>Event Coordinators</u>
+            </h5>
+            <p>
+              <b>Smriti Yadav</b> 99999999
+            </p>
+            <p>
+              <b>Yamini Sharma</b> 8750575593
+            </p>
           </Col>
         </Row>
         <p></p>

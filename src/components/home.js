@@ -60,20 +60,19 @@ class home extends Component {
               "You cannot endow even the best machine with initiative; the
               jolliest steamroller will not plant flowers."~ Walter Lippman{" "}
             </p>
-            Parikalan- The Computer Science Soceity of P.G.D.A.V. College was
+            Parikalan- The Computer Science Society of P.G.D.A.V. College was
             formed with one objective- unification of students of the Computer
             Science Department in a way that helps them grow through various
-            activities and oppurtunities - technical as well as non-technical.
-            The soceity has 5 constituents: Team Netweavers, Codebots, Projects,
-            Quizbots and Team EWS (Elocution, Workshop and Seminar). All these
-            teams coordinate with each other to conduct events throughout the
-            year. At the same time, the teams also conduct their own sessions
-            where they share information and learn new things. Training sessions
-            are also conducted for several things like coding, web designing,
-            presenting etc. All in all, the Parikalan soceity strives to shape
-            young minds in a way that every student is technologically ahead of
-            the soceity but at the same time they are holistically developed
-            into better humans.
+            activities and opportunities.
+            <br />
+            The society has 4 constituents: Netweavers, Codebots, Quizbots and
+            EWS (Elocution, Workshop and Seminar). All these teams coordinate
+            with each other to conduct events throughout the year. At the same
+            time, the teams also conduct their own training sessions where they
+            share information and learn new things.
+            <br /> All in all, the Parikalan society strives to shape young
+            minds in a way that every student is technically sound but at the
+            same time they are holistically developed into better humans.
           </p>
         </Jumbotron>
         <Row>
@@ -152,9 +151,9 @@ class home extends Component {
               </h3>
               <div>
                 <p>
-                  Dear Students I on behalf of the whole Parikalan Team feels
-                  immense pleasure to welcome you all in Parikalan, The Computer
-                  Science Society of PGDAV College.
+                  Dear Students
+                  <br />
+                  Welcome to Parikalan
                   <br /> Parikalan deals with healthy discussions of events of
                   different areas and aspects of the broad field of Computer
                   Science like Technical Quizzes, Workshops, Seminars, Web

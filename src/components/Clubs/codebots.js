@@ -8,19 +8,8 @@ import member2 from "./Images/codebots/member2.png";
 import member3 from "./Images/codebots/member3.png";
 import member4 from "./Images/codebots/member4.png";
 import member5 from "./Images/codebots/member5.png";
-import event1 from "./Images/codebots/poster1.png";
-import event2 from "./Images/codebots/poster2.png";
-import event3 from "./Images/codebots/poster3.png";
-import event4 from "./Images/codebots/poster4.png";
-import event5 from "./Images/codebots/poster5.png";
-import {
-  Image,
-  Row,
-  Col,
-  Carousel,
-  Container,
-  Jumbotron,
-} from "react-bootstrap";
+
+import { Row, Col, Container } from "react-bootstrap";
 
 const codebots = () => {
   return (
@@ -64,16 +53,16 @@ const codebots = () => {
         <Row>
           <Col xs={6} md={4}>
             <Figure>
-              <Figure.Image src={mentor1} />
-              <Figure.Caption>
+              <Figure.Image src={mentor1} roundedCircle />
+              <Figure.Caption style={{ color: "white" }}>
                 <strong>Mrs. Kirti Yadav</strong>
               </Figure.Caption>
             </Figure>
           </Col>
           <Col xs={6} md={4}>
             <Figure>
-              <Figure.Image src={mentor2} />
-              <Figure.Caption>
+              <Figure.Image src={mentor2} roundedCircle />
+              <Figure.Caption style={{ color: "white" }}>
                 <strong>Mrs. Purnima Bindal</strong>
               </Figure.Caption>
             </Figure>
@@ -85,7 +74,7 @@ const codebots = () => {
           <Col xs={6} md={4}>
             <Figure>
               <Figure.Image src={member1} roundedCircle />
-              <Figure.Caption>
+              <Figure.Caption style={{ color: "white" }}>
                 <strong>
                   Arpit Samadhiya
                   <br />
@@ -99,7 +88,7 @@ const codebots = () => {
           <Col xs={6} md={4}>
             <Figure>
               <Figure.Image src={member2} roundedCircle />
-              <Figure.Caption>
+              <Figure.Caption style={{ color: "white" }}>
                 <strong>
                   Yamini Sharma
                   <br />
@@ -113,7 +102,7 @@ const codebots = () => {
           <Col xs={6} md={4}>
             <Figure>
               <Figure.Image src={member5} roundedCircle />
-              <Figure.Caption>
+              <Figure.Caption style={{ color: "white" }}>
                 <strong>
                   Markandey Upadhyay
                   <br />
@@ -127,7 +116,7 @@ const codebots = () => {
           <Col xs={6} md={4}>
             <Figure>
               <Figure.Image src={member4} roundedCircle />
-              <Figure.Caption>
+              <Figure.Caption style={{ color: "white" }}>
                 <strong>
                   Anwesha Sanyal
                   <br />
@@ -141,7 +130,7 @@ const codebots = () => {
           <Col xs={6} md={4}>
             <Figure>
               <Figure.Image src={member3} roundedCircle />
-              <Figure.Caption>
+              <Figure.Caption style={{ color: "white" }}>
                 <strong>
                   Meghansh Tyagi
                   <br />
@@ -154,44 +143,6 @@ const codebots = () => {
           </Col>
         </Row>
       </Container>
-      <h1 className="head2">Achievements</h1>
-      <Carousel>
-        <Carousel.Item interval={1000}>
-          <img
-            className="d-block w-100 posters"
-            src={event1}
-            alt="First slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item interval={500}>
-          <img
-            className="d-block w-100 posters"
-            src={event2}
-            alt="Third slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100 posters"
-            src={event3}
-            alt="Third slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100 posters"
-            src={event4}
-            alt="Third slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100 posters"
-            src={event5}
-            alt="Third slide"
-          />
-        </Carousel.Item>
-      </Carousel>
     </Container>
   );
 };

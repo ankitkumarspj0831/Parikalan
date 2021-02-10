@@ -5,8 +5,8 @@ import adya from "./Images/netweavers/adya.png";
 import akanksha from "./Images/netweavers/akanksha.png";
 import preksha from "./Images/netweavers/preksha.png";
 import roshan from "./Images/netweavers/roshan.png";
-import ravish from './Images/netweavers/ravish.png';
-import demogg from './Images/demogg.png';
+import ravish from "./Images/netweavers/ravish.png";
+import charu from "./Images/netweavers/charu.jpg";
 
 import { Figure, Row, Col, Container } from "react-bootstrap";
 
@@ -17,9 +17,7 @@ const netweavers = () => {
 
       <figure>
         <blockquote class="blockquote">
-          <p>
-          “Websites promote you 24/7: No employee will do that.”
-          </p>
+          <p>“Websites promote you 24/7: No employee will do that.”</p>
         </blockquote>
         <figcaption class="blockquote-footer">
           By <cite title="Source Title">Paul Cookson</cite>
@@ -29,24 +27,17 @@ const netweavers = () => {
       <p>
         <strong>
           <i>
-            "Speak clearly if you speak at all; carve every word before you let
-            it fall." What's the use of having so much knowledge if you can't
-            put it forward in a good way?
-            <br />
-            This is exactly what EWS Club of Parikalan aims at. As the name
-            implies EWS i.e., Elocution, Workshop and Seminar Club has only one
-            motive: to develop interpersonal and intrapersonal skills of the
-            students. And the pandemic was not a hurdle in the way. The members
-            organise various activities such as quiz competition, essay writing,
-            paper presentation etc. to enhance the said skills. Previously, the
-            club had also organised some illuminating seminars and webinars by
-            some renowned speakers who not only engaged with students but also
-            imparted their valuable knowledge.
-            <br />
-            EWS Club gives students a chance to take part in any activity
-            irrespective of their field of study. The club plans to increase the
-            seminars in the upcoming semester and this time students will also
-            get to present their sessions.
+            "People don't care about what you say, they care about what you
+            build."
+            <br /> Imagine if you have the craving of debugging the error to
+            build robust and automated Dynamic Interface but there is no right
+            platform to direct you, that's where we introduce you with our Club
+            Netweavers.
+            <br /> Our motive is to provide platform for real time hands on for
+            web designing. We use MEAN stack to for development.
+            <br /> Our only motive is: to train the members with new technology
+            and advance skills to build the attractive interfaces, modules and
+            websites.
           </i>
         </strong>
       </p>
@@ -58,15 +49,15 @@ const netweavers = () => {
             <Figure>
               <Figure.Image src={ravish} roundedCircle />
               <Figure.Caption>
-                <strong>Dr. Ravish Sharma</strong>
+                <strong style={{color: "white"}}>Dr. Ravish Sharma</strong>
               </Figure.Caption>
             </Figure>
           </Col>
           <Col xs={6} md={4}>
             <Figure>
-              <Figure.Image src={demogg} roundedCircle />
+              <Figure.Image src={charu} roundedCircle />
               <Figure.Caption>
-                <strong>Dr. Charu Puri</strong>
+                <strong style={{color: "white"}}>Dr. Charu Puri</strong>
               </Figure.Caption>
             </Figure>
           </Col>
@@ -77,7 +68,7 @@ const netweavers = () => {
           <Col xs={6} md={4}>
             <Figure>
               <Figure.Image src={ankit} roundedCircle />
-              <Figure.Caption>
+              <Figure.Caption style={{color: "white"}}>
                 <strong>
                   Ankit Kumar
                   <br />
@@ -91,7 +82,7 @@ const netweavers = () => {
           <Col xs={6} md={4}>
             <Figure>
               <Figure.Image src={adya} roundedCircle />
-              <Figure.Caption>
+              <Figure.Caption style={{color: "white"}}>
                 <strong>
                   Adya Mishra
                   <br />
@@ -105,7 +96,7 @@ const netweavers = () => {
           <Col xs={6} md={4}>
             <Figure>
               <Figure.Image src={preksha} roundedCircle />
-              <Figure.Caption>
+              <Figure.Caption style={{color: "white"}}>
                 <strong>
                   Preksha
                   <br />
@@ -119,7 +110,7 @@ const netweavers = () => {
           <Col xs={6} md={4}>
             <Figure>
               <Figure.Image src={akanksha} roundedCircle />
-              <Figure.Caption>
+              <Figure.Caption style={{color: "white"}}>
                 <strong>
                   Akanksha Jain
                   <br />
@@ -133,7 +124,7 @@ const netweavers = () => {
           <Col xs={6} md={4}>
             <Figure>
               <Figure.Image src={roshan} roundedCircle />
-              <Figure.Caption>
+              <Figure.Caption style={{color: "white"}}>
                 <strong>
                   Roshan Kumar
                   <br />

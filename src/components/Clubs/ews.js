@@ -60,7 +60,7 @@ const ews = () => {
           <Col xs={6} md={4}>
             <Figure>
               <Figure.Image src={veenu} roundedCircle />
-              <Figure.Caption>
+              <Figure.Caption style={{ color: "white" }}>
                 <strong>Dr. Veenu Bhasin</strong>
               </Figure.Caption>
             </Figure>
@@ -68,7 +68,7 @@ const ews = () => {
           <Col xs={6} md={4}>
             <Figure>
               <Figure.Image src={aparna} roundedCircle />
-              <Figure.Caption>
+              <Figure.Caption style={{ color: "white" }}>
                 <strong>Dr. Aparna Dutt</strong>
               </Figure.Caption>
             </Figure>
@@ -80,7 +80,7 @@ const ews = () => {
           <Col xs={6} md={4}>
             <Figure>
               <Figure.Image src={smriti} roundedCircle />
-              <Figure.Caption>
+              <Figure.Caption style={{ color: "white" }}>
                 <strong>
                   Smriti Yadav
                   <br />
@@ -94,7 +94,7 @@ const ews = () => {
           <Col xs={6} md={4}>
             <Figure>
               <Figure.Image src={ansh} roundedCircle />
-              <Figure.Caption>
+              <Figure.Caption style={{ color: "white" }}>
                 <strong>
                   Ansh Goyal
                   <br />
@@ -108,7 +108,7 @@ const ews = () => {
           <Col xs={6} md={4}>
             <Figure>
               <Figure.Image src={mansi} roundedCircle />
-              <Figure.Caption>
+              <Figure.Caption style={{ color: "white" }}>
                 <strong>
                   Mansi Pathak
                   <br />
@@ -122,7 +122,7 @@ const ews = () => {
           <Col xs={6} md={4}>
             <Figure>
               <Figure.Image src={arpita} roundedCircle />
-              <Figure.Caption>
+              <Figure.Caption style={{ color: "white" }}>
                 <strong>
                   Arpita Dixit
                   <br />
@@ -136,7 +136,7 @@ const ews = () => {
           <Col xs={6} md={4}>
             <Figure>
               <Figure.Image src={ashutosh} roundedCircle />
-              <Figure.Caption>
+              <Figure.Caption style={{ color: "white" }}>
                 <strong>
                   Ashutosh Gangwar
                   <br />
@@ -150,7 +150,7 @@ const ews = () => {
           <Col xs={6} md={4}>
             <Figure>
               <Figure.Image src={nishtha} roundedCircle />
-              <Figure.Caption>
+              <Figure.Caption style={{ color: "white" }}>
                 <strong>
                   Nishtha Mahajan
                   <br />
@@ -164,7 +164,7 @@ const ews = () => {
           <Col xs={6} md={4}>
             <Figure>
               <Figure.Image src={muskan} roundedCircle />
-              <Figure.Caption>
+              <Figure.Caption style={{ color: "white" }}>
                 <strong>
                   Muskan Bansal
                   <br />
@@ -177,44 +177,6 @@ const ews = () => {
           </Col>
         </Row>
       </Container>
-      {/* <h1 className="head2">Achievements</h1>
-      <Carousel>
-        <Carousel.Item interval={1000}>
-          <img
-            className="d-block w-100 posters"
-            src={event1}
-            alt="First slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item interval={500}>
-          <img
-            className="d-block w-100 posters"
-            src={event2}
-            alt="Third slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100 posters"
-            src={event3}
-            alt="Third slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100 posters"
-            src={event4}
-            alt="Third slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100 posters"
-            src={event5}
-            alt="Third slide"
-          />
-        </Carousel.Item>
-      </Carousel> */}
       <p></p>
       <p></p>
     </Container>
