@@ -44,7 +44,7 @@ class Signup extends Component {
     document.title = "Paikalan-Signup";
     return (
       <Container className={clas.container} style={{ width: "80%" }}>
-        <Form className={clas.label}>
+        <Form className={clas.label} onSubmit={this.onSubmit}>
           <Form.Group as={Row}>
             <Form.Label column sm={2}>
               Name
@@ -55,6 +55,7 @@ class Signup extends Component {
                 placeholder="Name"
                 name="name"
                 onChange={this.onChange}
+                required
               />
             </Col>
           </Form.Group>
@@ -69,6 +70,7 @@ class Signup extends Component {
                 placeholder="Email"
                 name="email"
                 onChange={this.onChange}
+                required
               />
             </Col>
           </Form.Group>
@@ -83,6 +85,7 @@ class Signup extends Component {
                 placeholder="Password"
                 name="password"
                 onChange={this.onChange}
+                required
               />
             </Col>
           </Form.Group>
@@ -101,6 +104,7 @@ class Signup extends Component {
                 placeholder="College"
                 name="college"
                 onChange={this.onChange}
+                required
               />
             </Col>
           </Form.Group>
@@ -115,6 +119,7 @@ class Signup extends Component {
                 placeholder="Course"
                 name="course"
                 onChange={this.onChange}
+                required
               />
             </Col>
           </Form.Group>
@@ -129,6 +134,7 @@ class Signup extends Component {
                 placeholder="Year"
                 name="year"
                 onChange={this.onChange}
+                required
               />
             </Col>
           </Form.Group>
@@ -143,15 +149,14 @@ class Signup extends Component {
                 placeholder="Whatsapp Number"
                 name="whatsapp"
                 onChange={this.onChange}
+                required
               />
             </Col>
           </Form.Group>
 
           <Form.Group as={Row}>
             <Col sm={{ span: 10, offset: 2 }}>
-              <Button type="submit" onClick={this.onSubmit}>
-                Sign Up
-              </Button>
+              <Button type="submit">Sign Up</Button>
             </Col>
           </Form.Group>
         </Form>

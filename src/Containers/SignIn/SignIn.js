@@ -1,6 +1,5 @@
 import { Component } from "react";
 import { Container, Form, Row, Col, Button } from "react-bootstrap";
-import { connect } from "react-redux";
 import classes from "./SignIn.module.css";
 
 class SignIn extends Component {
@@ -16,35 +15,14 @@ class SignIn extends Component {
   onSubmit = (event) => {
     this.props.onSignIn(event, {
       email: this.state.email,
-      password: this.state.password
-    })
-   /*  fetch("http://localhost:8000/auth/signin", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(this.state),
-    })
-      .then((result) => {
-        return result.json();
-      })
-      .then((response) => {
-        if (response.message === "success") {
-          console.log("User successfully signed in.");
-          this.props.onSuccess();
-          this.props.history.push("/");
-        }
-      })
-      .catch((err) => {
-        console.log("[SignIn]: Fetching from backend failed.");
-        console.log("Error: " + err);
-      }); */
+      password: this.state.password,
+    });
   };
-  
+
   render() {
     return (
       <Container className={classes.container} /* style={{ width: "50%" }} */>
-        <Form className={classes.label}>
+        <Form className={classes.label} onSubmit={this.onSubmit}>
           <Form.Group as={Row}>
             <Form.Label column sm={2}>
               Email
@@ -55,6 +33,7 @@ class SignIn extends Component {
                 placeholder="Email"
                 name="email"
                 onChange={this.onChange}
+                required
               />
             </Col>
           </Form.Group>
@@ -69,17 +48,14 @@ class SignIn extends Component {
                 placeholder="Password"
                 name="password"
                 onChange={this.onChange}
+                required
               />
             </Col>
           </Form.Group>
 
           <Form.Group as={Row}>
-            <Col sm={{ span: 10, offset: 2 }}>
-              <Button
-                type="submit"
-                onClick={this.onSubmit}
-                style={{ align: "center" }}
-              >
+            <Col /* sm={{ span: 10, offset: 2 }} */>
+              <Button type="submit" style={{ align: "center" }}>
                 Sign In
               </Button>
             </Col>
@@ -90,16 +66,4 @@ class SignIn extends Component {
   }
 }
 
-/* const mapStateToProps = (state) => {
-  return {
-    isLoggedIn: state.isLoggedIn,
-  };
-}; */
-
-/* const mapDispatchToProps = (dispatch) => {
-  return {
-    onSuccess: () => dispatch({ type: "SUCCESS" }),
-  };
-}; */
-
-export default connect()(SignIn);
+export default SignIn;

@@ -67,23 +67,26 @@ class App extends Component {
       })
       .then((resData) => {
         console.log(resData);
-        this.props.onSuccess(); // redux to set isloggedin to true
-        this.setState({
-          isAuth: true,
-          token: resData.token,
-          userId: resData.userId,
-        });
-        localStorage.setItem("token", resData.token);
-        localStorage.setItem("userId", resData.userId);
-        const remainingMilliseconds = 60 * 60 * 1000;
-        const expiryDate = new Date(
-          new Date().getTime() + remainingMilliseconds
-        );
-        localStorage.setItem("expiryDate", expiryDate.toISOString());
-        this.setAutoLogout(remainingMilliseconds);
-        this.props.history.replace("/");
+        if (resData.message === "success") {
+          this.props.onSuccess(); // redux to set isloggedin to true
+          this.setState({
+            isAuth: true,
+            token: resData.token,
+            userId: resData.userId,
+          });
+          localStorage.setItem("token", resData.token);
+          localStorage.setItem("userId", resData.userId);
+          const remainingMilliseconds = 60 * 60 * 1000;
+          const expiryDate = new Date(
+            new Date().getTime() + remainingMilliseconds
+          );
+          localStorage.setItem("expiryDate", expiryDate.toISOString());
+          this.setAutoLogout(remainingMilliseconds);
+          this.props.history.push("/");
+        }
       })
       .catch((err) => {
+        console.log("Error signing in ");
         console.log(err);
         this.setState({
           isAuth: false,
