@@ -8,8 +8,9 @@
   justify-content: center;
   width: "80%";
 }
+
 .label {
-  width: 620px;
+  width: auto;
   text-align: left;
   display: inline-block;
   margin-bottom: 50px;

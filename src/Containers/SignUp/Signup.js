@@ -43,7 +43,7 @@ class Signup extends Component {
   render() {
     document.title = "Paikalan-Signup";
     return (
-      <Container className={clas.container} style={{ width: "80%" }}>
+      <Container className={clas.container} style={{ width: "80%" }} fluid>
         <Form className={clas.label} onSubmit={this.onSubmit}>
           <Form.Group as={Row}>
             <Form.Label column sm={2}>

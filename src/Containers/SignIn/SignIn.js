@@ -21,7 +21,10 @@ class SignIn extends Component {
 
   render() {
     return (
-      <Container className={classes.container} /* style={{ width: "50%" }} */>
+      <Container
+        className={classes.container}
+        fluid style={{ width: "80%" }} 
+      >
         <Form className={classes.label} onSubmit={this.onSubmit}>
           <Form.Group as={Row}>
             <Form.Label column sm={2}>
