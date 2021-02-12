@@ -30,7 +30,6 @@ class App extends Component {
   };
 
   componentDidMount() {
-    console.log("Inside componet did mount.");
     const token = localStorage.getItem("token");
     const expiryDate = localStorage.getItem("expiryDate");
     if (!token || !expiryDate) {
@@ -40,7 +39,6 @@ class App extends Component {
       this.logoutHandler();
       return;
     }
-    console.log("Not expired");
     const userId = localStorage.getItem("userId");
     const remainingMilliSeconds =
       new Date(expiryDate).getTime() - new Date().getTime();
@@ -50,7 +48,6 @@ class App extends Component {
   }
 
   loginHandler = (event, authData) => {
-    console.log("inside login handler");
     event.preventDefault();
     fetch("https://parikalanpgdav.herokuapp.com/auth/signin", {
       method: "POST",
@@ -66,7 +63,9 @@ class App extends Component {
         return res.json();
       })
       .then((resData) => {
-        console.log(resData);
+        if (resData.message === "error") {
+          alert("Invalid Credentials.");
+        }
         if (resData.message === "success") {
           this.props.onSuccess(); // redux to set isloggedin to true
           this.setState({
@@ -82,7 +81,7 @@ class App extends Component {
           );
           localStorage.setItem("expiryDate", expiryDate.toISOString());
           this.setAutoLogout(remainingMilliseconds);
-          this.props.history.push("/");
+          this.props.history.push("/xenium");
         }
       })
       .catch((err) => {

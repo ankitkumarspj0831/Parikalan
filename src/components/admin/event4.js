@@ -21,7 +21,6 @@ class Event4 extends Component {
             resData.registrations
           ),
         });
-        console.log("Event registrations");
       })
       .catch((err) => {
         console.log("Error fetching event1 registrations.");
@@ -34,7 +33,7 @@ class Event4 extends Component {
       <Container>
         <Row>
           <Col>
-            <h1>Event4 Registrations.</h1>
+            <h1>Group Discusssion Registrations.</h1>
           </Col>
           <Col>
             <h1>Total Registrations: {this.state.eventregistrations.length}</h1>

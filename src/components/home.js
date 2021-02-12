@@ -10,7 +10,7 @@ import {
 import { Component } from "react";
 import teacherInCharge from "../teacher-in-charge.png";
 import president from "../president.png";
-import xenium2021 from "../xenium2021.jpeg";
+import xenium2021 from "../xenium2021.jpg";
 import HomeCarousel from "./Carousels/HomeCarousel";
 import ContactUs from "./contactUs";
 import XeniumVideo from "./Xenium/xenium_video.mp4";
@@ -77,8 +77,11 @@ class home extends Component {
         </Jumbotron>
         <Row>
           <Col lg={4} md={6} xs={12} style={{ marginTop: "5px" }}>
-            <video height="240px" width="320px" autoPlay loop>
-              <source src={XeniumVideo} type="video/mp4" />
+            <video height="240px" width="320px" autoPlay loop muted>
+              <source
+                src={XeniumVideo}
+                type="video/mp4"
+              />
             </video>
           </Col>
           <Col>

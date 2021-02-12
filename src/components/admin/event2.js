@@ -33,7 +33,7 @@ class Event2 extends Component {
       <Container>
         <Row>
           <Col>
-            <h1>Event2 Registrations.</h1>
+            <h1>Web Designing Registrations.</h1>
           </Col>
           <Col>
             <h1>Total Registrations: {this.state.eventregistrations.length}</h1>

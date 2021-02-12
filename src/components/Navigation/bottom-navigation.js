@@ -16,7 +16,7 @@ const bottomNavigation = () => {
             href="https://www.facebook.com/ParikalanSociety/"
             className="facebook"
             target="_blank"
-            rel="norefferer"
+            rel="noreferrer"
           >
             <FacebookIcon style={{ marginRight: "10px", fontSize: "30px" }} />
           </a>
@@ -24,7 +24,7 @@ const bottomNavigation = () => {
             href="https://www.instagram.com/parikalan_pgdav/"
             className="instagram"
             target="_blank"
-            rel="norefferer"
+            rel="noreferrer"
           >
             <InstagramIcon style={{ marginRight: "10px", fontSize: "30px" }} />
           </a>
@@ -32,14 +32,14 @@ const bottomNavigation = () => {
             href="https://chat.whatsapp.com/KwzkmuFcZzWCSP2pA3zkiA"
             className="whatsapp"
             target="_blank"
-            rel="norefferer"
+            rel="noreferrer"
           >
             <WhatsAppIcon style={{ marginRight: "10px", fontSize: "30px" }} />
           </a>
           <a
             href="http://pgdavcollege.edu.in/"
             target="_blank"
-            rel="norefferer"
+            rel="noreferrer"
           >
             PGDAV College
           </a>

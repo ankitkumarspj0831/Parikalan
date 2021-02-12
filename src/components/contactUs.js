@@ -9,7 +9,7 @@ const contactUs = () => {
         <Col xs={12} lg={6}>
           <center>
             <h4>
-              <EmailIcon /> parikalanpgdav@gmail.com
+              <EmailIcon /> parikalan.pgdav@gmail.com
             </h4>
           </center>
         </Col>

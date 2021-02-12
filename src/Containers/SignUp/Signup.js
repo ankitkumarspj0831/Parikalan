@@ -30,8 +30,10 @@ class Signup extends Component {
         return result.json();
       })
       .then((response) => {
+        if(response.message === "exist") {
+          alert("Email already exists.");
+        }
         if (response.message === "created") {
-          console.log(response);
           this.props.history.push("/auth/signin");
         }
       })

@@ -2,6 +2,7 @@ import { Container, Row, Col, Jumbotron, Button, Image } from "react-bootstrap";
 import event4poster from "./event4poster.jpg";
 import { connect } from "react-redux";
 import ScheduleIcon from "@material-ui/icons/Schedule";
+import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 
 const xeniumEvent4 = (props) => {
   const userId = localStorage.getItem("userId");
@@ -29,15 +30,30 @@ const xeniumEvent4 = (props) => {
         console.log("Error");
         console.log(err);
       });
-    alert("Registered for 4th Event");
+    alert("Registered for Group Discussion");
   };
   let button;
   let registered = props.event4;
+
   if (props.isLoggedIn && registered) {
     button = (
-      <Button variant="success" disabled>
-        Already Registered
-      </Button>
+      <div>
+        <Button variant="success" disabled>
+          Already Registered
+        </Button>
+        <p></p>
+        <p>
+          Join the <WhatsAppIcon />
+          <a
+            href="https://chat.whatsapp.com/KJKvsQ49gvF6LkgHWz7LX4"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {" "}
+            Group
+          </a>
+        </p>
+      </div>
     );
   } else if (props.isLoggedIn) {
     button = (
@@ -53,45 +69,53 @@ const xeniumEvent4 = (props) => {
       <p></p>
       <Jumbotron>
         <Row>
-          Codebots presents an ultimate Coding Competition Code Crusade. The
-          competition will be on hackerank platform. Participants will solve
-          three questions in the mentioned time and those who will be able to
-          showcase their coding talent in the competition will make their way to
-          ultimate cash prize and certificate.😎😎😎
+          Have a knack for clicking pictures of situations from your viewpoint
+          camera?
+          <br /> 🤓Have a different say on that headline?
+          <br />
+          📰 We got you covered!💥💥
+          <br /> Xenium brings you an amazing event - Group Discussion because
+          we believe that its a healthy clash of viewpoints that makes us
+          wiser.🤩🤩 <br />
+          Mark the date and do join us for sharing your views or just to gain
+          some knowledge!✨✨
         </Row>
         <p></p>
         <Row>
           {/* Size of the image is of pixel 300 x 300px */}
           <Col xs={12} md={4}>
             {" "}
-            <Image src={event4poster} rounded height="auto" width="auto" />
+            <Image src={event4poster} rounded height="auto" width="95%" />
           </Col>
           <Col style={{ textAlign: "left" }} xs={12} md={8}>
-            <ScheduleIcon /> 11:00 am - 12:00 pm
+            <ScheduleIcon /> 4:30 pm - 6:00 pm
             <h4>Rules</h4>
-            1.) Time Allotted:  60 minutes.
-            <br /> 2.) Total questions: 3 <br />
-            3.) The faster with maximum score will be the winner.
-            <br />
-            4.) Anyone using unfair means will be disqualified. Admin
-            leaderboard will be used for  result analysis.
-            <br />
-            5.) In case of a tie, one will be judged on test submission timing
-            criteria.Decisions of the organisers will be final and binding.
-            <br />
-            6.) Platform: Hackerrank <br />
-            7.) All the Languages available for a particular question are
-            allowed for coding.
-            <br /> 8.) DM in Event's WhatsApp Group for any Query or Assistance
+            1.) There will be a group of 7 people.
+            <br /> 2.) A topic or a situation (case study) will be provided to
+            the group, five minutess prior to the discussion.
+            <br /> 3.) The duration of the group discussion is 30 mins.
+            <br /> 4.) The panellists will observe each candidate on the
+            following parameters:
+            <ul>
+              <li>Communication skills</li>
+              <li>Listening power</li>
+              <li>Attitude</li>
+              <li>Confidence</li>
+              <li>Way of presenting views</li>
+              <li>Interaction skills</li>
+              <li>Leadership skills</li>
+            </ul>
+            5.) The one with the highest score as per the panellists, will be
+            the winner.
+            <br /> 6.) The size and number of groups and the duration of the
+            Group Discussions completely depend on the number of participants
+            and is on the discretion of the organizers.
             <p></p>
             <h5>
-              <u>Event Coordinators</u>
+              <u>Event Coordinator</u>
             </h5>
             <p>
-              <b>Arpit Samadhiya</b> 6398921252
-            </p>
-            <p>
-              <b>Yamini Sharma</b> 8750575593
+              <b>Smriti Yadav</b> 9319160769
             </p>
           </Col>
         </Row>

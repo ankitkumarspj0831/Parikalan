@@ -1,10 +1,11 @@
-import { Container, Row, Col, Tab, Tabs } from "react-bootstrap";
+import { Container, Row, Col, Tab, Tabs, Image } from "react-bootstrap";
 import XeniumVideo from "./xenium_video.mp4";
 import ContactUs from "../contactUs";
 import XeniumEvent1 from "./xeniumEvent1";
 import XeniumEvent2 from "./xeniumEvent2";
 import XeniumEvent3 from "./xeniumEvent3";
 import XeniumEvent4 from "./xeniumEvent4";
+import xeniumPoster from "./xenium2021.jpg";
 
 import { connect } from "react-redux";
 import { useEffect } from "react";
@@ -14,31 +15,34 @@ const Xenium = (props) => {
 
   useEffect(() => {}, [count]);
   const userId = localStorage.userId;
-  fetch("https://parikalanpgdav.herokuapp.com/events", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      userId: userId,
-    }),
-  })
-    .then((res) => {
-      return res.json();
+  if (userId !== null) {
+    fetch("https://parikalanpgdav.herokuapp.com/events", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        userId: userId,
+      }),
     })
-    .then((resData) => {
-      console.log("ResData: " + resData.eventsArray);
-      if (resData.message === "success") {
-        if (resData.eventsArray[0]) props.event1True();
-        if (resData.eventsArray[1]) props.event2True();
-        if (resData.eventsArray[2]) props.event3True();
-        if (resData.eventsArray[3]) props.event4True();
-      }
-    })
-    .catch((err) => {
-      console.log("Error");
-      console.log(err);
-    });
+      .then((res) => {
+        return res.json();
+      })
+      .then((resData) => {
+        if (resData.message === "success") {
+          if (resData.eventsArray[0]) props.event1True();
+          if (resData.eventsArray[1]) props.event2True();
+          if (resData.eventsArray[2]) props.event3True();
+          if (resData.eventsArray[3]) props.event4True();
+        }
+        return;
+      })
+      .catch((err) => {
+        console.log("Error");
+        console.log(err);
+      });
+  }
+
   return (
     <Container style={{ textAlign: "left" }}>
       <Row style={{ alignItems: "center" }}>
@@ -62,19 +66,23 @@ const Xenium = (props) => {
         </Col>
       </Row>
       <hr></hr>
+      <center>
+        <Image src={xeniumPoster} fluid style={{ padding: "auto" }} />
+      </center>
+
       <hr></hr>
       <p></p>
-      <Tabs defaultActiveKey="event2">
-        <Tab eventKey="event1" title="🗣️Impromptu Relay 🧏🏻‍♂️">
+      <Tabs defaultActiveKey="event1">
+        <Tab eventKey="event1" title="🖥️Code Crusade🖥️">
           <XeniumEvent1 />
         </Tab>
-        <Tab eventKey="event2" title="Group Discussion">
+        <Tab eventKey="event2" title="Web Designing">
           <XeniumEvent2 />
         </Tab>
-        <Tab eventKey="event3" title="Web Designing">
+        <Tab eventKey="event3" title="🗣️Impromptu Relay 🧏🏻‍♂️">
           <XeniumEvent3 />
         </Tab>
-        <Tab eventKey="event4" title="🖥️Code Crusade🖥️">
+        <Tab eventKey="event4" title="Group Discussion">
           <XeniumEvent4 />
         </Tab>
       </Tabs>
