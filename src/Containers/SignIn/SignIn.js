@@ -20,6 +20,7 @@ class SignIn extends Component {
   };
 
   render() {
+    document.title="Parikalan-SignIn";
     return (
       <Container
         className={classes.container}

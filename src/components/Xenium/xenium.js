@@ -11,6 +11,7 @@ import { connect } from "react-redux";
 import { useEffect } from "react";
 
 const Xenium = (props) => {
+  document.title = "Parikalan-Xenium";
   const count = 0;
 
   useEffect(() => {}, [count]);
@@ -47,7 +48,7 @@ const Xenium = (props) => {
     <Container style={{ textAlign: "left" }}>
       <Row style={{ alignItems: "center" }}>
         <Col lg={4} md={6} xs={12} style={{ marginTop: "5px" }}>
-          <video height="240px" width="320px" autoPlay loop>
+          <video height="240px" width="320px" autoPlay loop muted>
             <source src={XeniumVideo} type="video/mp4" />
           </video>
         </Col>

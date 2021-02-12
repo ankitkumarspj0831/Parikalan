@@ -6,6 +6,7 @@ import QuizBotsLogo from "./Images/clubs/quizbots.png";
 import EWSLogo from "./Images/clubs/ews.png";
 
 const clubs = (props) => {
+  document.title="Parikalan-Clubs";
   const clubsInfo = [
     {
       imageSrc: NetweaversLogo,

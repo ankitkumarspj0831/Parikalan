@@ -45,7 +45,7 @@ const xeniumEvent3 = (props) => {
           <b>
             The registered participants will receive an email from us in few
             days, they have to confirm their presence otherwise their
-            registration will be canceled.
+            registration will be cancelled.
           </b>
         </p>
       </div>

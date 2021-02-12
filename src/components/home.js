@@ -48,6 +48,7 @@ class home extends Component {
   };
 
   render() {
+    document.title= "Parikalan- Home";
     return (
       <Container fluid>
         {" "}
@@ -78,10 +79,7 @@ class home extends Component {
         <Row>
           <Col lg={4} md={6} xs={12} style={{ marginTop: "5px" }}>
             <video height="240px" width="320px" autoPlay loop muted>
-              <source
-                src={XeniumVideo}
-                type="video/mp4"
-              />
+              <source src={XeniumVideo} type="video/mp4" />
             </video>
           </Col>
           <Col>
