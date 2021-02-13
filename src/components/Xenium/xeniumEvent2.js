@@ -1,6 +1,7 @@
 import { Container, Row, Col, Jumbotron, Button, Image } from "react-bootstrap";
 import event2poster from "./event2poster.jpg";
 import { connect } from "react-redux";
+import { NavLink } from "react-router-dom";
 import ScheduleIcon from "@material-ui/icons/Schedule";
 import EventIcon from "@material-ui/icons/Event";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
@@ -62,7 +63,11 @@ const xeniumEvent2 = (props) => {
       </Button>
     );
   } else {
-    button = <Button disabled>Login To Register</Button>;
+    button = (
+      <NavLink to="/auth/signup">
+        <Button>Login To Register</Button>
+      </NavLink>
+    );
   }
   return (
     <Container>
