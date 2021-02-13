@@ -92,7 +92,7 @@ const xeniumEvent4 = (props) => {
             <h4>Rules</h4>
             1.) There will be a group of 7 people.
             <br /> 2.) A topic or a situation (case study) will be provided to
-            the group, five minutess prior to the discussion.
+            the group, five minutes before to the discussion.
             <br /> 3.) The duration of the group discussion is 30 mins.
             <br /> 4.) The panellists will observe each candidate on the
             following parameters:

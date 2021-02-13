@@ -147,7 +147,7 @@ class Signup extends Component {
             </Form.Label>
             <Col sm={10}>
               <Form.Control
-                type="number"
+                type="text"
                 placeholder="Whatsapp Number"
                 name="whatsapp"
                 onChange={this.onChange}

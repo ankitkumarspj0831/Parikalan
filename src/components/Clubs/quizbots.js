@@ -104,7 +104,7 @@ const quizbots = () => {
               <Figure.Image src={ansh} roundedCircle />
               <Figure.Caption style={{ color: "white" }}>
                 <strong>
-                  Ansh Goyal
+                  Ansh Rastogi
                   <br />
                   B.Sc. H Comp Science
                   <br />

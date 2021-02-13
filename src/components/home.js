@@ -14,6 +14,7 @@ import xenium2021 from "../xenium2021.jpg";
 import HomeCarousel from "./Carousels/HomeCarousel";
 import ContactUs from "./contactUs";
 import XeniumVideo from "./Xenium/xenium_video.mp4";
+import { NavLink } from "react-router-dom";
 
 class home extends Component {
   onquerySubmit = (event) => {
@@ -48,7 +49,7 @@ class home extends Component {
   };
 
   render() {
-    document.title= "Parikalan- Home";
+    document.title = "Parikalan- Home";
     return (
       <Container fluid>
         {" "}
@@ -83,7 +84,14 @@ class home extends Component {
             </video>
           </Col>
           <Col>
-            <Image src={xenium2021} fluid margin="0 5px 5px 0" padding="auto" />
+            <NavLink to="/xenium">
+              <Image
+                src={xenium2021}
+                fluid
+                margin="0 5px 5px 0"
+                padding="auto"
+              />
+            </NavLink>
           </Col>
         </Row>
         <p></p>
