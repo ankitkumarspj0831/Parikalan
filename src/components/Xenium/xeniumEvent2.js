@@ -2,6 +2,7 @@ import { Container, Row, Col, Jumbotron, Button, Image } from "react-bootstrap";
 import event2poster from "./event2poster.jpg";
 import { connect } from "react-redux";
 import ScheduleIcon from "@material-ui/icons/Schedule";
+import EventIcon from "@material-ui/icons/Event";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 
 const xeniumEvent2 = (props) => {
@@ -83,6 +84,8 @@ const xeniumEvent2 = (props) => {
             <Image src={event2poster} rounded height="auto" width="95%" />
           </Col>
           <Col style={{ textAlign: "left" }} xs={12} md={8}>
+            <EventIcon /> 18th February 2021
+            <br />
             <ScheduleIcon /> 12:30 pm - 2:00 pm
             <h4>Rules</h4>
             1) This is a solo event.

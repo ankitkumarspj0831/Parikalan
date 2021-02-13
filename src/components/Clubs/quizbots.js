@@ -55,7 +55,7 @@ const quizbots = () => {
             <Figure>
               <Figure.Image src={priyanka} roundedCircle />
               <Figure.Caption style={{ color: "white" }}>
-                <strong>Priyanka Gupta</strong>
+                <strong>Ms. Priyanka Gupta</strong>
               </Figure.Caption>
             </Figure>
           </Col>
@@ -63,7 +63,7 @@ const quizbots = () => {
             <Figure>
               <Figure.Image src={akshay} roundedCircle />
               <Figure.Caption style={{ color: "white" }}>
-                <strong>Akshay Chamoli</strong>
+                <strong>Mr. Akshay Chamoli</strong>
               </Figure.Caption>
             </Figure>
           </Col>

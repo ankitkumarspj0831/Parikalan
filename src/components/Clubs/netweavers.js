@@ -33,9 +33,10 @@ const netweavers = () => {
             build robust and automated Dynamic Interface but there is no right
             platform to direct you, that's where we introduce you with our Club
             Netweavers.
-            <br /> Our motive is to provide platform for real time hands on for
-            web designing. We use MEAN stack to for development.
-            <br /> Our only motive is: to train the members with new technology
+            <br />
+            We provide platform for real time hands-on MEAN stack for the web
+            development.
+            <br /> Our only motive is to train the members with new technology
             and advance skills to build the attractive interfaces, modules and
             websites.
           </i>
@@ -49,7 +50,7 @@ const netweavers = () => {
             <Figure>
               <Figure.Image src={ravish} roundedCircle />
               <Figure.Caption>
-                <strong style={{color: "white"}}>Dr. Ravish Sharma</strong>
+                <strong style={{ color: "white" }}>Dr. Ravish Sharma</strong>
               </Figure.Caption>
             </Figure>
           </Col>
@@ -57,7 +58,7 @@ const netweavers = () => {
             <Figure>
               <Figure.Image src={charu} roundedCircle />
               <Figure.Caption>
-                <strong style={{color: "white"}}>Dr. Charu Puri</strong>
+                <strong style={{ color: "white" }}>Dr. Charu Puri</strong>
               </Figure.Caption>
             </Figure>
           </Col>
@@ -68,7 +69,7 @@ const netweavers = () => {
           <Col xs={6} md={4}>
             <Figure>
               <Figure.Image src={ankit} roundedCircle />
-              <Figure.Caption style={{color: "white"}}>
+              <Figure.Caption style={{ color: "white" }}>
                 <strong>
                   Ankit Kumar
                   <br />
@@ -82,7 +83,7 @@ const netweavers = () => {
           <Col xs={6} md={4}>
             <Figure>
               <Figure.Image src={adya} roundedCircle />
-              <Figure.Caption style={{color: "white"}}>
+              <Figure.Caption style={{ color: "white" }}>
                 <strong>
                   Adya Mishra
                   <br />
@@ -96,11 +97,11 @@ const netweavers = () => {
           <Col xs={6} md={4}>
             <Figure>
               <Figure.Image src={preksha} roundedCircle />
-              <Figure.Caption style={{color: "white"}}>
+              <Figure.Caption style={{ color: "white" }}>
                 <strong>
-                  Preksha
+                  Preksha Jha
                   <br />
-                  Mathematical Science
+                  B.Sc. Mathematical Science
                   <br />
                   IInd Year
                 </strong>
@@ -110,7 +111,7 @@ const netweavers = () => {
           <Col xs={6} md={4}>
             <Figure>
               <Figure.Image src={akanksha} roundedCircle />
-              <Figure.Caption style={{color: "white"}}>
+              <Figure.Caption style={{ color: "white" }}>
                 <strong>
                   Akanksha Jain
                   <br />
@@ -124,7 +125,7 @@ const netweavers = () => {
           <Col xs={6} md={4}>
             <Figure>
               <Figure.Image src={roshan} roundedCircle />
-              <Figure.Caption style={{color: "white"}}>
+              <Figure.Caption style={{ color: "white" }}>
                 <strong>
                   Roshan Kumar
                   <br />

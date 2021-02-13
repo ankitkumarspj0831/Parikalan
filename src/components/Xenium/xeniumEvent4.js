@@ -3,6 +3,7 @@ import event4poster from "./event4poster.jpg";
 import { connect } from "react-redux";
 import ScheduleIcon from "@material-ui/icons/Schedule";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
+import EventIcon from "@material-ui/icons/Event";
 
 const xeniumEvent4 = (props) => {
   const userId = localStorage.getItem("userId");
@@ -88,6 +89,8 @@ const xeniumEvent4 = (props) => {
             <Image src={event4poster} rounded height="auto" width="95%" />
           </Col>
           <Col style={{ textAlign: "left" }} xs={12} md={8}>
+            <EventIcon /> 18th February 2021
+            <br />
             <ScheduleIcon /> 4:30 pm - 6:00 pm
             <h4>Rules</h4>
             1.) There will be a group of 7 people.
@@ -107,9 +110,12 @@ const xeniumEvent4 = (props) => {
             </ul>
             5.) The one with the highest score as per the panellists, will be
             the winner.
-            <br /> 6.) The size and number of groups and the duration of the
-            Group Discussions completely depend on the number of participants
-            and is on the discretion of the organizers.
+            <br />{" "}
+            <b>
+              Note: The size and number of groups and the duration of the Group
+              Discussions completely depend on the number of participants and is
+              on the discretion of the organizers.
+            </b>
             <p></p>
             <h5>
               <u>Event Coordinator</u>
