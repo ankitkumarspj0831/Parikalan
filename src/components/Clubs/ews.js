@@ -112,7 +112,7 @@ const ews = () => {
                 <strong>
                   Mansi Pathak
                   <br />
-                  Mathematical Science
+                  B.Sc. Mathematical Science
                   <br />
                   IIIrd Year
                 </strong>
