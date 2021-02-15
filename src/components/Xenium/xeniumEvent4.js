@@ -65,9 +65,13 @@ const xeniumEvent4 = (props) => {
     );
   } else {
     button = (
-      <NavLink to="/auth/signup">
-        <Button>Login To Register</Button>
-      </NavLink>
+      <div>
+        <NavLink to="/auth/signup">
+          <Button>Login To Register</Button>
+        </NavLink>
+        <br />
+        <b>Join the whatsapp group(available after registration)</b>
+      </div>
     );
   }
   return (
