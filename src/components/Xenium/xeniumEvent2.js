@@ -101,20 +101,21 @@ const xeniumEvent2 = (props) => {
             <br /> 2) Programming Languages: HTML, CSS and JavaScript.
             <br /> 3) There will be two rounds.
             <br />
-            4) <b>Round 1: </b>
+            4) <b>Round 1(Google Form): </b>
             This round will consist of 40 questions on HTML, CSS and JavaScript.
             All questions will be in the format of multiple-choice questions.
             Duration will be 20 minutes.
             <br />
-            5) <b>Round 2: </b>
+            5) <b>Round 2(Google Classroom): </b>
             In this round, shortlisted participants from Round 1 will need to
             design a single web page based on provided structure in 30 minutes
-            using permitted development tools.
+            using permitted development tools<b>(Frameworks not allowed).</b>
             <br /> 6) In Round 2, participants will be given the structure of
             the webpage.
             <br /> 7) Assessment will be done on the basis of resemblance to the
             sample output, indentation and methodology used.
-            <br /> 8) Decision of the judges will be final and binding.
+            <br/> 8) Images to be used will be provided through google classroom.
+            <br /> 9) Decision of the judges will be final and binding.
             <p></p>
             <h5>
               <u>Event Coordinator</u>

@@ -76,6 +76,10 @@ class Signup extends Component {
               />
             </Col>
           </Form.Group>
+          <Form.Text className={clas.text}  muted>
+            Preffered: Official Email (Provided by the college)
+          </Form.Text>
+          <p></p>
 
           <Form.Group as={Row}>
             <Form.Label column sm={2}>
