@@ -127,7 +127,11 @@ const xeniumEvent3 = (props) => {
           </Col>
         </Row>
         <p></p>
-        <Row>{button}</Row>
+        <Row>
+          <Button variant="warning" disabled>
+            Registration Closed
+          </Button>
+        </Row>
       </Jumbotron>
     </Container>
   );

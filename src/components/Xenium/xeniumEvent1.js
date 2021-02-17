@@ -68,7 +68,7 @@ const xeniumEvent1 = (props) => {
         <NavLink to="/auth/signup">
           <Button>Login To Register</Button>
         </NavLink>
-        <br/>
+        <br />
         <b>Join the whatsapp group(available after registration)</b>
       </div>
     );
@@ -133,7 +133,11 @@ const xeniumEvent1 = (props) => {
           </Col>
         </Row>
         <p></p>
-        <Row>{button}</Row>
+        <Row>
+          <Button variant="warning" disabled>
+            Registration Closed
+          </Button>
+        </Row>
       </Jumbotron>
     </Container>
   );

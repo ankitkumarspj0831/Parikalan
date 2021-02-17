@@ -114,7 +114,8 @@ const xeniumEvent2 = (props) => {
             the webpage.
             <br /> 7) Assessment will be done on the basis of resemblance to the
             sample output, indentation and methodology used.
-            <br/> 8) Images to be used will be provided through google classroom.
+            <br /> 8) Images to be used will be provided through google
+            classroom.
             <br /> 9) Decision of the judges will be final and binding.
             <p></p>
             <h5>
@@ -126,7 +127,11 @@ const xeniumEvent2 = (props) => {
           </Col>
         </Row>
         <p></p>
-        <Row>{button}</Row>
+        <Row>
+          <Button variant="warning" disabled>
+            Registration Closed
+          </Button>
+        </Row>
       </Jumbotron>
     </Container>
   );
